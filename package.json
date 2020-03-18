@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
-  "title": "Gatsby V2 Tutorial Starter",
-  "description": "My Blog",
+  "name": "Game Center",
+  "author": "Brock Thigpen, Brandon Cauley, Josh Craig, Patrick Dorgu",
+  "title": "Game Center",
+  "description": "Game Center",
   "homepage": "https://gatsby-tutorial-starter.netlify.com",
   "license": "MIT",
   "version": "0.0.7",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
+    "url": "https://github.com/BrockThigpen/Project3/tree/master"
   },
   "scripts": {
     "develop": "gatsby develop",
@@ -66,10 +66,13 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "justin formentin",
-    "personal blog",
-    "tutorial",
+    "games",
+    "react",
     "gatsby",
-    "emotion"
+    "8-bit",
+    "flappy-bird",
+    "snake",
+    "pong",
+    "tic-tac-toe"
   ]
 }
