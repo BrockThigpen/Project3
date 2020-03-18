@@ -1,0 +1,29 @@
+{
+  "name": "Project3",
+  "version": "1.0.0",
+  "description": "MIT License",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrockThigpen/Project3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrockThigpen/Project3/issues"
+  },
+  "homepage": "https://github.com/BrockThigpen/Project3#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config.json": "0.0.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.9.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
