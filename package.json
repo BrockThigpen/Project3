@@ -1,14 +1,14 @@
 {
-  "name": "Game Center",
-  "author": "Brock Thigpen, Brandon Cauley, Josh Craig, Patrick Dorgu",
-  "title": "Game Center",
-  "description": "Game Center",
+  "name": "gatsby-tutorial-starter",
+  "author": "Justin Formentin",
+  "title": "Gatsby V2 Tutorial Starter",
+  "description": "My Blog",
   "homepage": "https://gatsby-tutorial-starter.netlify.com",
   "license": "MIT",
   "version": "0.0.7",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BrockThigpen/Project3/tree/master"
+    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
   },
   "scripts": {
     "develop": "gatsby develop",
