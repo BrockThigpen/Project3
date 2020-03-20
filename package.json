@@ -12,6 +12,7 @@
   },
   "scripts": {
     "develop": "gatsby develop",
+    "heroku-postbuild": "gatsby build",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "rm -rf public && rm -rf .cache",
