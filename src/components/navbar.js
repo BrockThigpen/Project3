@@ -47,6 +47,15 @@ class Navbar extends Component {
                   Page 2
                 </Link>
               </MDBNavItem>
+              <MDBNavItem>
+                <Link
+                  to="/leaderboard"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  Leaderboards
+                </Link>
+              </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBContainer>
