@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { MDBBtn, MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
-import draw from './app';
 class ModalPage extends Component {
 state = {
   modal13: false
@@ -23,7 +22,7 @@ render() {
           Dodge The Lightening
         </MDBModalHeader>
         <MDBModalBody>
-        <canvas id='canvas' width='608' height='608' ref={draw}></canvas>
+        <canvas id='canvas' width='608' height='608'></canvas>
         </MDBModalBody>
         <MDBModalFooter>
           <MDBBtn color="secondary" onClick={this.toggle(13)}>
