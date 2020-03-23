@@ -10,7 +10,6 @@ import {
 } from "mdbreact"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Jumbotron from "../components/jumbotron"
 
@@ -50,11 +49,7 @@ const IndexPage = () => (
             </Link>
           </div>
         </MDBCol>
-        <MDBCol size="auto" md="4" className="d-none d-md-block">
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-            <Image />
-          </div>
-        </MDBCol>
+  
       </MDBRow>
     </MDBContainer>
   </Layout>
