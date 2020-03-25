@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-
+import AuthBtn from './authBtn.js'
 import { Link } from "gatsby"
 import {
   MDBNavbar,
@@ -34,9 +34,7 @@ class Navbar extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link to="/" className="nav-link" activeClassName="active">
-                  Home
-                </Link>
+                <AuthBtn/>
               </MDBNavItem>
               <MDBNavItem>
                 <Link
