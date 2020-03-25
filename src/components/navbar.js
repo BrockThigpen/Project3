@@ -26,7 +26,7 @@ class Navbar extends Component {
       <MDBNavbar color="primary-color" dark expand="md">
         <MDBContainer>
           <MDBNavbarBrand>
-            <Link to="/">
+            <Link to="/page-2">
               <strong className="white-text">{this.props.siteTitle}</strong>
             </Link>
           </MDBNavbarBrand>
