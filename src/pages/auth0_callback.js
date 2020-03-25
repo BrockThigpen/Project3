@@ -11,8 +11,7 @@ const Auth0CallbackPage = () => {
     return (
         <Layout>
             <h1>
-                This is the auth callback page, you should be redirected
-                immediately.
+                Loading...
             </h1>
         </Layout>
     );
