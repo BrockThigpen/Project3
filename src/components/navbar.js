@@ -19,7 +19,7 @@ class Navbar extends Component {
 
   toggleCollapse = () => {
     this.setState({ isOpen: !this.state.isOpen })
-  }
+  } 
 
   render() {
     return (
