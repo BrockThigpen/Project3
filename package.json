@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "gatsby": "2.20.2",
     "gatsby-image": "2.3.0",
     "gatsby-plugin-manifest": "2.3.1",
@@ -16,6 +18,8 @@
     "gatsby-transformer-sharp": "2.4.1",
     "mdbreact": "4.25.4",
     "node-sass": "4.13.1",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",

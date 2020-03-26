@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-
+import logo from "../images/appname.png"
 import { Link } from "gatsby"
 import {
   MDBNavbar,
@@ -27,7 +27,7 @@ class Navbar extends Component {
         <MDBContainer>
           <MDBNavbarBrand>
             <Link to="/">
-              <strong className="white-text">{this.props.siteTitle}</strong>
+              <img src={logo} alt="website logo" />
             </Link>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
