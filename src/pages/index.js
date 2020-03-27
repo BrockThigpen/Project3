@@ -8,15 +8,19 @@ import {
   MDBCol,
   MDBBadge,
 } from "mdbreact"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Jumbotron from "../components/jumbotron"
+import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Login/Signup" />
     <Jumbotron />
+<<<<<<< HEAD
+    <Footer />
+  </>
+=======
     <MDBContainer>
       <MDBRow>
         <MDBCol size="auto" md="8">
@@ -53,6 +57,7 @@ const IndexPage = () => (
       </MDBRow>
     </MDBContainer>
   </Layout>
+>>>>>>> 32f2591eac3d38b4dd274ab30bc2866f1cf1ef81
 )
 
 export default IndexPage
