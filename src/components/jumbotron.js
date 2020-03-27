@@ -7,8 +7,12 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdbreact"
+import { useAuth } from "react-use-auth"
+
 
 const Jumbotron = () => {
+
+  const { isAuthenticated, login, logout } = useAuth()
   return (
     <MDBJumbotron
       fluid
@@ -17,22 +21,27 @@ const Jumbotron = () => {
       <MDBContainer fluid className="mt-5 text-center">
         <MDBRow>
           <MDBCol>
-            <h1 className="h1">Gatsby + MDBReact</h1>
+            <h1 className="h1">React Games??</h1>
             <p className="text-primary lead my-4">
-              Kick off your next Gatsby project with this MDBReact starter.
+              something something games.
             </p>
 
             <hr className="my-4" style={{ width: "30rem" }} />
             <div className="pt-2">
-              <MDBBtn
-                href="https://github.com/zlutfi/gatsby-starter-mdbreact"
-                target="_blank"
+            {!isAuthenticated() && <MDBBtn
+                onClick={() => login()}
+                size="lg"
                 rel="noopener noreferrer"
-                color="primary"
+                gradient="blue"
                 className="waves-effect"
-              >
-                Download Now <MDBIcon fab icon="github" className="ml-2" />
-              </MDBBtn>
+              >Login</MDBBtn>}
+            {isAuthenticated() && <MDBBtn
+                onClick={() => logout()}
+                size="lg"
+                rel="noopener noreferrer"
+                gradient="blue"
+                className="waves-effect"
+              >Logout</MDBBtn>}
             </div>
           </MDBCol>
         </MDBRow>

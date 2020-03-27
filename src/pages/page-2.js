@@ -7,7 +7,7 @@ import Image from "../components/image";
 import ModalPage from "../components/modalpage";
 
 const SecondPage = () => (
-  
+
   <Layout>
     <MDBContainer className="py-5">
       <SEO title="Page two" />
@@ -21,18 +21,17 @@ const SecondPage = () => (
       </Link>
 
       <MDBCol size="auto" md="3" className="d-none d-md-block">
-        <div style={{maxHeight: `300px`, marginBottom: `1.45rem` }}>
+        <div style={{ maxHeight: `300px`, marginBottom: `1.45rem` }}>
           <Image />
         </div>
         <ModalPage>
         </ModalPage>
       </MDBCol>
-    
+
     </MDBContainer>
 
   </Layout>
 )
-
 
 
 

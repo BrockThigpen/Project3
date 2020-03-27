@@ -42,7 +42,7 @@
 // Material colors palette
 @each $color_name, $color in $material-colors {
   .#{$color_name} {
-    background-color: $color !important;
+    background-color: black !important;
   }
 }
 

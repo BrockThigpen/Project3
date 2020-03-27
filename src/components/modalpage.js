@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { MDBBtn, MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import { render } from "react-dom";
+import { MDBBtn, MDBContainer, MDBModal, MDBModalBody} from 'mdbreact';
 import '../css/main.css';
 import AppContainer from '../containers/AppContainer';
 
@@ -25,8 +26,8 @@ render() {
         {/* <MDBModalHeader toggle={this.toggle(13)}>
           Dodge The Lightening
         </MDBModalHeader> */}
-        <MDBModalBody style={{background: 'white', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-        <AppContainer /> {document.getElementById("root")}
+        <MDBModalBody style={{id:"root", background: 'white', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center'}}>
+        {render(<AppContainer />, document.getElementById("root"))};
         </MDBModalBody>
         {/* <MDBModalFooter>
           <MDBBtn color="secondary" onClick={this.toggle(13)}>

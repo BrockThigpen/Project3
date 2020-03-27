@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-
+import AuthBtn from './authBtn.js'
 import { Link } from "gatsby"
 import {
   MDBNavbar,
@@ -19,14 +19,14 @@ class Navbar extends Component {
 
   toggleCollapse = () => {
     this.setState({ isOpen: !this.state.isOpen })
-  }
+  } 
 
   render() {
     return (
       <MDBNavbar color="primary-color" dark expand="md">
         <MDBContainer>
           <MDBNavbarBrand>
-            <Link to="/">
+            <Link to="/page-2">
               <strong className="white-text">{this.props.siteTitle}</strong>
             </Link>
           </MDBNavbarBrand>
@@ -34,9 +34,7 @@ class Navbar extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link to="/" className="nav-link" activeClassName="active">
-                  Home
-                </Link>
+                <AuthBtn/>
               </MDBNavItem>
               <MDBNavItem>
                 <Link
@@ -45,6 +43,15 @@ class Navbar extends Component {
                   activeClassName="active"
                 >
                   Page 2
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link
+                  to="/leaderboard"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  Leaderboards
                 </Link>
               </MDBNavItem>
             </MDBNavbarNav>

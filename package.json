@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "gatsby": "2.20.2",
     "gatsby-image": "2.3.0",
     "gatsby-plugin-manifest": "2.3.1",
@@ -20,7 +22,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "react-use-auth": "^0.5.3"
   },
   "devDependencies": {
     "prettier": "1.19.1"
