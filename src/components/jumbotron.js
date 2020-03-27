@@ -30,12 +30,14 @@ const Jumbotron = () => {
             <div className="pt-2">
             {!isAuthenticated() && <MDBBtn
                 onClick={() => login()}
+                size="lg"
                 rel="noopener noreferrer"
                 gradient="blue"
                 className="waves-effect"
               >Login</MDBBtn>}
             {isAuthenticated() && <MDBBtn
                 onClick={() => logout()}
+                size="lg"
                 rel="noopener noreferrer"
                 gradient="blue"
                 className="waves-effect"
