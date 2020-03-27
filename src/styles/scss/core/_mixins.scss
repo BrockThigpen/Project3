@@ -493,8 +493,9 @@ $opacity: .9;
   .navbar-nav {
     .nav-item {
       .nav-link {
-        color: $color;
+        color: red;
         transition: $navbar-nav-transition;
+        font-weight: bold;
 
         &:hover {
           color: $color-2;
