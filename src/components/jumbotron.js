@@ -36,12 +36,9 @@ const Jumbotron = () => {
                 className="waves-effect"
               >Login</MDBBtn>}
             {isAuthenticated() && <MDBBtn
-                onClick={() => logout()}
+                href="/page-2"
                 size="lg"
-                rel="noopener noreferrer"
-                gradient="blue"
-                className="waves-effect"
-              >Logout</MDBBtn>}
+              >Continue to Site</MDBBtn>}
             </div>
           </MDBCol>
         </MDBRow>
