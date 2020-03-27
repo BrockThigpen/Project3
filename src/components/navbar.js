@@ -1,6 +1,10 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+<<<<<<< HEAD
 import logo from "../images/appname.png"
+=======
+import AuthBtn from './authBtn.js'
+>>>>>>> 74174acef741c5ce96d0c8d0195f4b7cd7e8453d
 import { Link } from "gatsby"
 import {
   MDBNavbar,
@@ -26,17 +30,20 @@ class Navbar extends Component {
       <MDBNavbar color="primary-color" dark expand="md">
         <MDBContainer>
           <MDBNavbarBrand>
+<<<<<<< HEAD
             <Link to="/">
               <img src={logo} alt="website logo" />
+=======
+            <Link to="/page-2">
+              <strong className="white-text">{this.props.siteTitle}</strong>
+>>>>>>> 74174acef741c5ce96d0c8d0195f4b7cd7e8453d
             </Link>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link to="/" className="nav-link" activeClassName="active">
-                  Home
-                </Link>
+                <AuthBtn/>
               </MDBNavItem>
               <MDBNavItem>
                 <Link

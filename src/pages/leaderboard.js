@@ -5,7 +5,7 @@ import { MDBContainer, MDBBtn, MDBIcon } from "mdbreact"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Leaderboards = () => (
+const LeaderboardsPage = () => (
   <Layout>
     <MDBContainer className="py-5">
       <SEO title="Page two" />
@@ -15,4 +15,4 @@ const Leaderboards = () => (
   </Layout>
 )
 
-export default Leaderboards
+export default LeaderboardsPage
