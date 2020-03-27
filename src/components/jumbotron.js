@@ -31,7 +31,6 @@ const Jumbotron = () => {
             {!isAuthenticated() && <MDBBtn
                 onClick={() => login()}
                 size="lg"
-                rel="noopener noreferrer"
                 gradient="blue"
                 className="waves-effect"
               >Login</MDBBtn>}
