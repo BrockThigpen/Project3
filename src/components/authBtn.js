@@ -1,15 +1,24 @@
 import React from 'react'
 import { useAuth } from "react-use-auth"
+import { MDBBtn } from "mdbreact"
 
 const AuthBtn = () => {
 
   const { isAuthenticated, login, logout } = useAuth()
 
   return (
-    <div>
-      {!isAuthenticated() && <button onClick={() => login()}>Login</button>}
-      {isAuthenticated() && <button onClick={() => logout()}>Logout</button>}
-    </div>
+    <>
+      {!isAuthenticated() && <MDBBtn 
+        onClick={() => login()}
+        className="waves-effect"
+        flat
+      >Login</MDBBtn>}
+      {isAuthenticated() && <MDBBtn 
+        onClick={() => logout()}
+        className="waves-effect"
+        flat
+      >Logout</MDBBtn>}
+    </>
   )
 }
 
