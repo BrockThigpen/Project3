@@ -26,13 +26,14 @@ render() {
         {/* <MDBModalHeader toggle={this.toggle(13)}>
           Dodge The Lightening
         </MDBModalHeader> */}
-        <MDBModalBody style={{id:"root", background: 'white', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center'}}>
+        <MDBModalBody style={{ id:'root', background: 'white', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center'}}>
         {render(<AppContainer />, document.getElementById("root"))};
         </MDBModalBody>
-        {/* <MDBModalFooter>
-          <MDBBtn color="secondary" onClick={this.toggle(13)}>
+        <MDBBtn color="secondary" onClick={this.toggle(13)}>
             Close
           </MDBBtn>
+        {/* <MDBModalFooter>
+          
           <MDBBtn color="primary">Save changes</MDBBtn>
         </MDBModalFooter> */}
       </MDBModal>
