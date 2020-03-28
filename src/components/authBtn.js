@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAuth } from "react-use-auth"
 import { MDBBtn } from "mdbreact"
+import { Link } from 'gatsby'
 
 const AuthBtn = () => {
 
@@ -10,14 +11,14 @@ const AuthBtn = () => {
     <>
       {!isAuthenticated() && <MDBBtn 
         onClick={() => login()}
-        className="waves-effect"
+        className="nav-link"
         flat
       >Login</MDBBtn>}
-      {isAuthenticated() && <MDBBtn 
+      {isAuthenticated() && <Link 
         onClick={() => logout()}
-        className="waves-effect"
+        className="nav-link"
         flat
-      >Logout</MDBBtn>}
+      >Logout</Link>}
     </>
   )
 }
