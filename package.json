@@ -4,6 +4,9 @@
   "description": "A simple starter with MDBReact to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "engines": {
+    "node": "10.16.x"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
