@@ -35,16 +35,13 @@ const Jumbotron = () => {
               {!isAuthenticated() && <MDBBtn
                 onClick={() => login()}
                 size="lg"
-                rel="noopener noreferrer"
-                color="danger"
-              >Login / Sign</MDBBtn>}
-              {isAuthenticated() && <MDBBtn
-                onClick={() => logout()}
-                size="lg"
-                rel="noopener noreferrer"
                 gradient="blue"
                 className="waves-effect"
-              >Logout</MDBBtn>}
+              >Login</MDBBtn>}
+            {isAuthenticated() && <MDBBtn
+                href="/page-2"
+                size="lg"
+              >Continue to Site</MDBBtn>}
             </div>
           </MDBCol>
         </MDBRow>
