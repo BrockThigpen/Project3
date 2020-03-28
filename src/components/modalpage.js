@@ -26,7 +26,7 @@ render() {
         {/* <MDBModalHeader toggle={this.toggle(13)}>
           Dodge The Lightening
         </MDBModalHeader> */}
-        <MDBModalBody style={{ id:'root', background: 'white', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center'}}>
+        <MDBModalBody style={{ background: 'white', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center'}}>
         {render(<AppContainer />, document.getElementById("root"))};
         </MDBModalBody>
         <MDBBtn color="secondary" onClick={this.toggle(13)}>
