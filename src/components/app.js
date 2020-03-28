@@ -1,5 +1,4 @@
 import React from "react";
-
 import BirdContainer from "../containers/BirdContainer";
 import PillarContainer from "../containers/PillarContainer";
 import Score from "./Score";
