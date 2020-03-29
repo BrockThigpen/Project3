@@ -6,8 +6,11 @@ import Score from "./Score";
 import GameOver from "./GameOver";
 import StartScreen from "./StartScreen";
 
+
+
 function App(props) {
 	if (props.isGameStarted) {
+		
 		return (
 			<div>
 				<BirdContainer isGameOver={props.isGameOver}
