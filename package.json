@@ -22,7 +22,9 @@
     "jsonwebtoken": "^8.1.0",
     "mdbootstrap": "^4.14.1",
     "mongoose": "5.7.5",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "jquery": "^3.3.1",
+    "npm": "^6.5.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",

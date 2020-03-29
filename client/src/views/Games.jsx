@@ -1,11 +1,13 @@
 import React from 'react'
-import vipImage from '../vip.png'
+import { render } from "react-dom";
+// import vipImage from '../vip.png'
+import AppContainer from "../containers/BirdContainers/AppContainer";
+import "../css/BirdGameCss/main.css";
 
 const Games = (props) => {
 	return (
 		<div className='VIP'>
-			<h1>Welcome to Strategic Machines!</h1>
-			<img src={vipImage} alt="VIP" />
+			{render(<AppContainer />, document.getElementById("root"))};
 		</div>
 	)
 }
