@@ -1,7 +1,7 @@
 import React from 'react'
 import vipImage from '../vip.png'
 
-const Machine = (props) => {
+const Games = (props) => {
 	return (
 		<div className='VIP'>
 			<h1>Welcome to Strategic Machines!</h1>
@@ -10,4 +10,4 @@ const Machine = (props) => {
 	)
 }
 
-export default Machine 
+export default Games

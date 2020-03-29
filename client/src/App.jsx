@@ -6,7 +6,7 @@ import NavBar from './NavBar'
 import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
-import Machine from './views/Machine'
+import Games from './views/Games'
 import Home from './views/Home'
 
 class App extends React.Component {
@@ -43,9 +43,9 @@ class App extends React.Component {
 						return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
 					}} />
 
-					<Route path="/machine" render={() => {
+					<Route path="/Games" render={() => {
 						return currentUser
-							? <Machine />
+							? <Games/>
 							: <Redirect to="/login" />
 					}} />
 
