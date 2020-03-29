@@ -1,5 +1,6 @@
 require('dotenv').config()
-
+const path = require('path')
+const publicPath = path.join(__dirname, '..', 'public');
 const express = require('express')
 const logger = require('morgan')
 const mongoose = require('mongoose')
@@ -15,7 +16,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
 	console.log(err || `Connected to MongoDB.`)
 })
 
-app.use(express.static(`${__dirname}/client/build`))
+app.use(express.static(publicPath))
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
@@ -27,7 +28,7 @@ app.get('/api', (req, res) => {
 app.use('/api/users', usersRoutes)
 
 app.use('*', (req, res) => {
-	res.sendFile(`${__dirname}/client/build/index.html`)
+	res.sendFile(path.join(publicPath, 'index.html'))
 })
 
 app.listen(PORT, (err) => {
