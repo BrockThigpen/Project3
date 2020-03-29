@@ -1,29 +1,51 @@
 {
-  "name": "Project3",
-  "version": "1.0.0",
-  "description": "MIT License",
-  "main": "app.js",
+  "name": "gatsby-starter-mdbreact",
+  "private": true,
+  "description": "A simple starter with MDBReact to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "gatsby": "2.20.2",
+    "gatsby-image": "2.3.0",
+    "gatsby-plugin-manifest": "2.3.1",
+    "gatsby-plugin-offline": "3.1.0",
+    "gatsby-plugin-react-helmet": "3.2.0",
+    "gatsby-plugin-sass": "2.2.0",
+    "gatsby-plugin-sharp": "2.5.1",
+    "gatsby-source-filesystem": "2.2.1",
+    "gatsby-transformer-sharp": "2.4.1",
+    "mdbreact": "4.25.4",
+    "node-sass": "4.13.1",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "5.2.1",
+    "jquery": "^3.4.1",
+    "react-use-auth": "^0.5.3"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "gatsby build",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrockThigpen/Project3.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BrockThigpen/Project3/issues"
-  },
-  "homepage": "https://github.com/BrockThigpen/Project3#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config.json": "0.0.4",
-    "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "mongoose": "^5.9.5",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

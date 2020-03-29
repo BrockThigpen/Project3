@@ -1,23 +1,27 @@
-# Project3
+<!-- Status Badges -->
 
-MIT License
+[![GitHub issues](https://img.shields.io/github/issues/zlutfi/gatsby-starter-mdbreact)](https://github.com/zlutfi/gatsby-starter-mdbreact/issues)
+[![GitHub forks](https://img.shields.io/github/forks/zlutfi/gatsby-starter-mdbreact)](https://github.com/zlutfi/gatsby-starter-mdbreact/network)
+[![GitHub stars](https://img.shields.io/github/stars/zlutfi/gatsby-starter-mdbreact)](https://github.com/zlutfi/gatsby-starter-mdbreact/stargazers)
+[![GitHub license](https://img.shields.io/github/license/zlutfi/gatsby-starter-mdbreact)](https://github.com/zlutfi/gatsby-starter-mdbreact/blob/master/LICENSE)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb5f1475-b470-4dd1-b480-f1d6f829bb01/deploy-status)](https://app.netlify.com/sites/gatsby-starter-mdbreact/deploys)
 
-Copyright (c) 2020 Brock Thigpen, Tyler Cauley, Josh Craig, Patrick Dorgu.
+# Gatsby Starter MDBReact
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+https://mighty-castle-10210.herokuapp.com/
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+This is a barebones Gatsby starter with Material Design Bootstrap React components. Use this starter to get up and running quickly with your next Gatsby project.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+![Screenshot](screenshot.jpg)
+
+[View Demo](https://gatsby-starter-mdbreact.netlify.com/)
+
+## Features
+
+- Sass Ready
+- Font Awesome Icons
+- Progressive Web App
+
+<!-- Deploy to Netlify -->
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zlutfi/gatsby-starter-mdreact)
