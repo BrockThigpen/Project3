@@ -7,6 +7,7 @@ import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Games from './views/Games'
+import FlappyBird from './views/FlappyBird'
 import Home from './views/Home'
 
 class App extends React.Component {
@@ -20,7 +21,7 @@ class App extends React.Component {
 		httpClient.logOut()
 		this.setState({ currentUser: null })
 	}
-	
+
 	render() {
 		const { currentUser } = this.state
 		return (
@@ -45,7 +46,13 @@ class App extends React.Component {
 
 					<Route path="/Games" render={() => {
 						return currentUser
-							? <Games/>
+							? <Games />
+							: <Redirect to="/login" />
+					}} />
+
+					<Route path="/FlappyBird" render={() => {
+						return currentUser
+							? <FlappyBird />
 							: <Redirect to="/login" />
 					}} />
 

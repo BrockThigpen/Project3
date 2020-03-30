@@ -3,6 +3,8 @@ import App from "../../components/BirdGame/App";
 
 import $ from "jquery";
 
+
+
 class AppContainer extends React.Component {
     constructor(props) {
         super(props);
