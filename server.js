@@ -1,10 +1,10 @@
 require('dotenv').config()
 const path = require('path')
-const publicPath = path.join(__dirname, '..', 'public');
 const express = require('express')
 const logger = require('morgan')
 const mongoose = require('mongoose')
 const usersRoutes = require('./routes')
+const publicPath = path.join(__dirname, '..', 'public');
 
 const app = express()
 
