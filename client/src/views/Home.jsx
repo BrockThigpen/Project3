@@ -18,10 +18,9 @@ const Home = props => {
         </strong>
       </h4>
       <br></br>
-      <br></br>
       <Link to="/login">
-        <button type="button" className="selBtn">
-          Log In
+        <button type="button" className="selBtn2">
+          Sign In
         </button>
       </Link>
     </div>

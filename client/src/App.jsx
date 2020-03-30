@@ -25,8 +25,8 @@ class App extends React.Component {
   render() {
     const { currentUser } = this.state
     return (
-      <div className="App container">
-        <NavBar currentUser={currentUser} />
+      <div className="AppContainer">
+        {/* <NavBar currentUser={currentUser} /> */}
 
         <Switch>
           <Route

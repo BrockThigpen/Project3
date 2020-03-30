@@ -31,15 +31,16 @@ class SignUp extends React.Component {
   render() {
     const { name, password } = this.state.fields
     return (
+      <div className="homeContainer text-center">
       <div className="SignUp">
         <div className="row">
           <div className="column column-33 column-offset-33">
-            <h1>Sign Up</h1>
+            <h1 className="text-white"><strong>Sign Up</strong></h1>
             <form
               onChange={this.onInputChange.bind(this)}
               onSubmit={this.onFormSubmit.bind(this)}
             >
-              <input type="text" placeholder="Name" name="name" value={name} />
+              <input type="text" placeholder="Username" name="name" value={name} />
 
               <input
                 type="password"
@@ -47,7 +48,6 @@ class SignUp extends React.Component {
                 name="password"
                 value={password}
               />
-              <button>Sign Up</button>
               <Link to="/login">
                 <button type="button" className="selBtn">
                   Login
@@ -56,6 +56,7 @@ class SignUp extends React.Component {
             </form>
           </div>
         </div>
+      </div>
       </div>
     )
   }
