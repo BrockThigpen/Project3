@@ -24,13 +24,6 @@ const Home = props => {
           Log In
         </button>
       </Link>
-      <br></br>
-      <br></br>
-      <Link to="/signup">
-        <button type="button" className="selBtn">
-          Sign Up
-        </button>
-      </Link>
     </div>
   )
 }
