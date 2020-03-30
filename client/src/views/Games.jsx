@@ -1,13 +1,15 @@
 import React from 'react'
-import { render } from 'react-dom'
-// import vipImage from '../vip.png'
-import AppContainer from '../containers/BirdContainers/AppContainer'
-import '../css/BirdGameCss/main.css'
+import { Link } from 'react-router-dom'
+import vipImage from '../vip.png'
 
 const Games = () => {
   return (
     <div className="VIP">
-      {render(<AppContainer />, document.getElementById('root'))};
+      <span>
+        <Link to="/FlappyBird">
+          <img src={vipImage} alt="VIP" />
+        </Link>
+      </span>
     </div>
   )
 }
