@@ -7,9 +7,11 @@ const Games = () => {
 	return (
 		<div className='VIP'>
 			<span>
-				
+
 				<Link to="/FlappyBird">
-				<img src={vipImage} alt="VIP" /></Link>
+					<img src={vipImage} alt="VIP" /></Link>
+				<Link to="/Pong">
+					<img src={vipImage} alt="VIP" /></Link>
 			</span>
 		</div>
 
