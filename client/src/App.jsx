@@ -56,6 +56,12 @@ class App extends React.Component {
 							: <Redirect to="/login" />
 					}} />
 
+					<Route path="/Pong" render={() => {
+						return currentUser
+							? <Pong />
+							: <Redirect to="/login" />
+					}} />
+
 					<Route path="/" component={Home} />
 
 				</Switch>
