@@ -7,6 +7,7 @@ import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Games from './views/Games'
+import Pong from './views/Pong'
 import FlappyBird from './views/FlappyBird'
 import Home from './views/Home'
 
@@ -75,11 +76,30 @@ class App extends React.Component {
             }}
           />
 
-          <Route path="/" component={Home} />
-        </Switch>
-      </div>
-    )
-  }
+					<Route path="/Games" render={() => {
+						return currentUser
+							? <Games />
+							: <Redirect to="/login" />
+					}} />
+
+					<Route path="/FlappyBird" render={() => {
+						return currentUser
+							? <FlappyBird />
+							: <Redirect to="/login" />
+					}} />
+
+					<Route path="/Pong" render={() => {
+						return currentUser
+							? <Pong />
+							: <Redirect to="/login" />
+					}} />
+
+					<Route path="/" component={Home} />
+
+				</Switch>
+			</div>
+		)
+	}
 }
 
 export default App
