@@ -20,7 +20,7 @@ class SignUp extends React.Component {
   onFormSubmit(evt) {
     evt.preventDefault()
     httpClient.signUp(this.state.fields).then(user => {
-      this.setState({ fields: { name: '', email: '', password: '' } })
+      this.setState({ fields: { email: '', name: '', password: '' } })
       if (user) {
         this.props.onSignUpSuccess(user)
         this.props.history.push('/Games')
@@ -29,7 +29,7 @@ class SignUp extends React.Component {
   }
 
   render() {
-    const { name, password } = this.state.fields
+    const { email, name, password } = this.state.fields
     return (
       <div className="SignUp">
         <div className="row">
@@ -39,6 +39,13 @@ class SignUp extends React.Component {
               onChange={this.onInputChange.bind(this)}
               onSubmit={this.onFormSubmit.bind(this)}
             >
+              <input
+                type="text"
+                placeholder="Email"
+                name="emial"
+                value={email}
+              />
+
               <input type="text" placeholder="Name" name="name" value={name} />
 
               <input
