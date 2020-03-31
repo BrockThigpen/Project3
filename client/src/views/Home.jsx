@@ -14,13 +14,13 @@ const Home = props => {
       <br></br>
       <h4>
         <strong className="text-white">
-          Please sign in below to continue...
+          Please login below to continue...
         </strong>
       </h4>
       <br></br>
       <Link to="/login">
         <button type="button" className="selBtn2">
-          Sign In
+          Login
         </button>
       </Link>
     </div>
