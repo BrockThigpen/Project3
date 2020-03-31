@@ -1,5 +1,6 @@
 import React from 'react'
 import httpClient from '../httpClient'
+import logo from '../images/appname.png'
 
 // sign up form behaves almost identically to log in form. We could create a flexible Form component to use for both actions, but for now we'll separate the two:
 class SignUp extends React.Component {
@@ -30,15 +31,17 @@ class SignUp extends React.Component {
   render() {
     const { name, email, password } = this.state.fields
     return (
+      <div className="homeContainer text-center">
       <div className="SignUp">
         <div className="row">
           <div className="column column-33 column-offset-33">
-            <h1>Sign Up</h1>
+          <img src={logo} alt="website logo" width="80%" height="auto"/>
+              <br></br>
             <form
               onChange={this.onInputChange.bind(this)}
               onSubmit={this.onFormSubmit.bind(this)}
             >
-              <input type="text" placeholder="Name" name="name" value={name} />
+              <input type="text" placeholder="name" name="name" value={name} />
               <input
                 type="text"
                 placeholder="Email"
@@ -51,10 +54,11 @@ class SignUp extends React.Component {
                 name="password"
                 value={password}
               />
-              <button>Sign Up</button>
+              <button className="selBtn">Sign Up</button>
             </form>
           </div>
         </div>
+      </div>
       </div>
     )
   }
