@@ -7,6 +7,7 @@ import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Games from './views/Games'
+import Leaderboard from './views/Leaderboard'
 import Pong from './views/Pong'
 import FlappyBird from './views/FlappyBird'
 import Home from './views/Home'
@@ -66,6 +67,13 @@ class App extends React.Component {
             path="/Games"
             render={() => {
               return currentUser ? <Games /> : <Redirect to="/login" />
+            }}
+          />
+
+          <Route
+            path="/Leaderboard"
+            render={() => {
+              return currentUser ? <Leaderboard /> : <Redirect to="/login" />
             }}
           />
 
