@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import httpClient from '../httpClient'
 
 // sign up form behaves almost identically to log in form. We could create a flexible Form component to use for both actions, but for now we'll separate the two:
 class SignUp extends React.Component {
   state = {
-    fields: { name: '', password: '' },
+    fields: { name: '', email: '', password: '' },
   }
 
   onInputChange(evt) {
@@ -20,16 +19,16 @@ class SignUp extends React.Component {
   onFormSubmit(evt) {
     evt.preventDefault()
     httpClient.signUp(this.state.fields).then(user => {
-      this.setState({ fields: { email: '', name: '', password: '' } })
+      this.setState({ fields: { name: '', email: '', password: '' } })
       if (user) {
         this.props.onSignUpSuccess(user)
-        this.props.history.push('/Games')
+        this.props.history.push('/games')
       }
     })
   }
 
   render() {
-    const { email, name, password } = this.state.fields
+    const { name, email, password } = this.state.fields
     return (
       <div className="SignUp">
         <div className="row">
@@ -39,15 +38,13 @@ class SignUp extends React.Component {
               onChange={this.onInputChange.bind(this)}
               onSubmit={this.onFormSubmit.bind(this)}
             >
+              <input type="text" placeholder="Name" name="name" value={name} />
               <input
                 type="text"
                 placeholder="Email"
-                name="emial"
+                name="email"
                 value={email}
               />
-
-              <input type="text" placeholder="Name" name="name" value={name} />
-
               <input
                 type="password"
                 placeholder="Password"
@@ -55,11 +52,6 @@ class SignUp extends React.Component {
                 value={password}
               />
               <button>Sign Up</button>
-              <Link to="/login">
-                <button type="button" className="selBtn">
-                  Login
-                </button>
-              </Link>
             </form>
           </div>
         </div>

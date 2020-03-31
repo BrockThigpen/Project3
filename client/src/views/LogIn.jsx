@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import httpClient from '../httpClient'
 
 class LogIn extends React.Component {
   state = {
-    fields: { name: '', password: '' },
+    fields: { email: '', password: '' },
   }
 
   onInputChange(evt) {
@@ -19,7 +18,7 @@ class LogIn extends React.Component {
   onFormSubmit(evt) {
     evt.preventDefault()
     httpClient.logIn(this.state.fields).then(user => {
-      this.setState({ fields: { name: '', password: '' } })
+      this.setState({ fields: { email: '', password: '' } })
       if (user) {
         this.props.onLoginSuccess(user)
         this.props.history.push('/Games')
@@ -28,7 +27,7 @@ class LogIn extends React.Component {
   }
 
   render() {
-    const { name, password } = this.state.fields
+    const { email, password } = this.state.fields
     return (
       <div className="LogIn">
         <div className="row">
@@ -38,7 +37,12 @@ class LogIn extends React.Component {
               onChange={this.onInputChange.bind(this)}
               onSubmit={this.onFormSubmit.bind(this)}
             >
-              <input type="text" placeholder="Name" name="name" value={name} />
+              <input
+                type="text"
+                placeholder="Email"
+                name="email"
+                value={email}
+              />
               <input
                 type="password"
                 placeholder="Password"
@@ -46,11 +50,6 @@ class LogIn extends React.Component {
                 value={password}
               />
               <button>Log In</button>
-              <Link to="/signup">
-                <button type="button" className="selBtn">
-                  Sign Up
-                </button>
-              </Link>
             </form>
           </div>
         </div>
