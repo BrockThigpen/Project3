@@ -42,7 +42,7 @@ background-size: cover;
 /* a {
   color: white;
 } */
-.selBtn:hover, .selBtn2:hover{
+.selBtn:hover, .selBtn2:hover, .gameBtn:hover, .gameBtn2:hover {
   background-color: black;
   border-style: solid;
   border-width: 3px;
