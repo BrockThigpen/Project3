@@ -55,7 +55,13 @@ background-size: cover;
   margin-left: auto;
   margin-right: auto;
 }
-
+.gameApps{
+  border-radius: 25px;
+  height: 400px;
+  width: auto;
+  box-shadow: 5px 5px 10px 1px white;
+  margin: 20px;
+}
 .AppContainer{
   background-color: black;
   width: 90%;
