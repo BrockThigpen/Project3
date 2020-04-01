@@ -42,14 +42,12 @@ class App extends React.Component {
               )
             }}
           />
-
           <Route
             path="/logout"
             render={props => {
               return <LogOut onLogOut={this.logOut.bind(this)} />
             }}
           />
-
           {/* the sign up component takes an 'onSignUpSuccess' prop which will perform the same thing as onLoginSuccess: set the state to contain the currentUser */}
           <Route
             path="/signup"
@@ -62,52 +60,35 @@ class App extends React.Component {
               )
             }}
           />
-
           <Route
             path="/Games"
             render={() => {
               return currentUser ? <Games /> : <Redirect to="/login" />
             }}
           />
-
           <Route
             path="/Leaderboard"
             render={() => {
               return currentUser ? <Leaderboard /> : <Redirect to="/login" />
             }}
           />
-
           <Route
             path="/FlappyBird"
             render={() => {
               return currentUser ? <FlappyBird /> : <Redirect to="/login" />
             }}
           />
-
-					<Route path="/Games" render={() => {
-						return currentUser
-							? <Games />
-							: <Redirect to="/login" />
-					}} />
-
-					<Route path="/FlappyBird" render={() => {
-						return currentUser
-							? <FlappyBird />
-							: <Redirect to="/login" />
-					}} />
-
-					<Route path="/Pong" render={() => {
-						return currentUser
-							? <Pong />
-							: <Redirect to="/login" />
-					}} />
-
-					<Route path="/" component={Home} />
-
-				</Switch>
-			</div>
-		)
-	}
+          <Route
+            path="/Pong"
+            render={() => {
+              return currentUser ? <Pong /> : <Redirect to="/login" />
+            }}
+          />
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
+    )
+  }
 }
 
 export default App
