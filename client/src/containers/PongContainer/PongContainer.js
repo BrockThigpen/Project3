@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/PongCss/pong.css'
 
 class Pong extends React.Component {
     constructor(props) {
