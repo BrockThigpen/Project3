@@ -293,7 +293,7 @@ class Pong extends React.Component {
 
     render() {
         return (
-            <canvas ref="canvas" width={this.state.screenW} height={this.state.screenH}/>
+            <canvas ref="canvas" id='pongCanvas' width={this.state.screenW} height={this.state.screenH}/>
         )
     }
 }
