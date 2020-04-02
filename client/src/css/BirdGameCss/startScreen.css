@@ -1,5 +1,5 @@
 #startScreen {
-  color: #03A9F4;
+  color: red;
   font-size: 2em;
   font-weight: bold;
   width: 100%;
@@ -9,7 +9,21 @@
   text-align: center;
 }
 
-#startScreen div {
-  display: table-cell;
-  vertical-align: middle;
+.flappyStart{
+  padding-top: 15%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gameBtn {
+  background-color: red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  width: 20%;
 }
