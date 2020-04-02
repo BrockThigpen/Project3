@@ -1,7 +1,7 @@
 import React from "react";
 
 function FlyBtn(props) {
-	return <button onClick={() => document.location.reload()} />;
+	return <button  />;
 }
 
 export default FlyBtn
