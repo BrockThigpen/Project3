@@ -15,7 +15,7 @@ const pushScore = (score, game) => {
       if (score > user.game2) {
         axios.patch(window.location.origin + '/api/users/' + user._id,
           { 
-            'game2': score 
+            game2: score
           },
           function (err, res) {
             if (err) {
