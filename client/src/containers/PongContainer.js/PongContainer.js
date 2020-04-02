@@ -1,4 +1,5 @@
 import React from 'react';
+import pushScore from '../../pushScore.js'
 
 class Pong extends React.Component {
     constructor(props) {
@@ -237,6 +238,10 @@ class Pong extends React.Component {
                 ballX: this.state.ballInit.x,
                 ballY: this.state.ballInit.y,
             })
+            let score = this.state.score.player
+            const game = 'game2'
+            pushScore(score, game)
+
         }
     }
 
