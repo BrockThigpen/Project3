@@ -5,14 +5,14 @@ import pong from '../images/pong.jpg'
 
 const Games = () => {
   return (
-<div class="container">
-  <div class="row">
+<div className="container">
+  <div className="row">
     <div className="col-md-6 d-flex justify-content-center">
     <Link to="/FlappyBird">
     <img src={ball} alt="ball_game" className="gameApps"/>
       </Link>
     </div>
-    <div class="col-md-6 d-flex justify-content-center">
+    <div className="col-md-6 d-flex justify-content-center">
     <Link to="/Pong">
     <img src={pong} alt="ball_game" className="gameApps"/>
       </Link>
