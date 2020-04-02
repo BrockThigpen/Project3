@@ -239,6 +239,10 @@ class Pong extends React.Component {
                 ballY: this.state.ballInit.y,
             })
         }
+
+        if (this.state.score.AI === 5){
+            console.log("you suck")
+        }
     }
 
     draw(ctx) {
@@ -291,6 +295,7 @@ class Pong extends React.Component {
         ctx.font = this.state.scoreFont;
         ctx.fillText("PAUSED", this.state.screenW / 2, this.state.screenH / 2);
     }
+
 
     render() {
         return (

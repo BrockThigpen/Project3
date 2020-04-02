@@ -30,14 +30,16 @@ const Games = () => {
         </div>
       </div>
 
+      <div className="VIP">
+      <span>
+        <Link to="/Pong">
+          <img src={vipImage} alt="VIP" />
+        </Link>
+      </span>
     </div>
-    // <div className="VIP">
-    //   <span>
-    //     <Link to="/FlappyBird">
-    //       <img src={vipImage} alt="VIP" />
-    //     </Link>
-    //   </span>
-    // </div>
+
+    </div>
+    
   )
 
 }
