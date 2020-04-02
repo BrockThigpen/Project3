@@ -1,7 +1,9 @@
 import React from "react";
 import App from "../../components/BirdGame/App";
+import puchScore from '../../pushScore'
 
 import $ from "jquery";
+import pushScore from "../../pushScore";
 
 
 
@@ -44,6 +46,8 @@ class AppContainer extends React.Component {
         }, function () {
             console.log(score);
             // insert puchScore hook here
+            const game = 'game1'
+            pushScore(score, game)
         });
     }
 
