@@ -16,7 +16,7 @@ function Pong(props) {
 		return (
 			<div>
 				<PongContainer />
-				<Skunk {props.state.score.AI===5} />
+				<Skunk />
 			</div>
 		);
 	} else {
