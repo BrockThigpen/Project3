@@ -139,7 +139,7 @@ class Pong extends React.Component {
             newPos = 0;
         if (newPos > this.state.screenH)
             newPos = this.state.screenH;
-    
+
         this.setState({
             playerY: newPos,
         })
@@ -240,9 +240,12 @@ class Pong extends React.Component {
             })
         }
 
-        if (this.state.score.AI === 5){
-            console.log("you suck")
+        if (this.state.score.AI === 5) {
+           
+            console.log('you suck')
         }
+       
+            
     }
 
     draw(ctx) {
@@ -299,7 +302,7 @@ class Pong extends React.Component {
 
     render() {
         return (
-            <canvas ref="canvas" id='pongCanvas' width={this.state.screenW} height={this.state.screenH}/>
+            <canvas ref="canvas" id='pongCanvas' width={this.state.screenW} height={this.state.screenH} />
         )
     }
 }
