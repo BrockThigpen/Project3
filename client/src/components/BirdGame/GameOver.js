@@ -10,6 +10,7 @@ function GameOver(props) {
             <Link to="/Games">
                 <button className="gameBtn2">Home</button>
             </Link>
+            
         </div>
     );
 }
