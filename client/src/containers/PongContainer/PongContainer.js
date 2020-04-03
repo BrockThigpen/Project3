@@ -1,6 +1,9 @@
 import React from 'react';
 import '../../css/PongCss/pong.css'
 
+import Skunk from '../../components/Pong/Skunk'
+
+
 class Pong extends React.Component {
     constructor(props) {
         super(props);
@@ -42,15 +45,34 @@ class Pong extends React.Component {
                 player: 0,
                 AI: 0,
             },
+
+            isGameStarted: false,
+
+            lost: false,
+
             scoreX: 200,
             scoreY: 100,
             scoreFont: "60px Consolas",
-        }
+        };
+
+        this.lost = this.lost.bind(this);
+
+
     }
+
+
 
     componentDidMount() {
         const canvas = this.refs.canvas;
         const ctx = canvas.getContext('2d');
+
+        this.setState({
+            isGameStarted: true,
+        })
+
+        console.log('started')
+
+
 
         this.interval = setInterval(() => this.fixedUpdate(ctx), 16.666667);
         document.addEventListener("keydown", this.keyDown.bind(this), false);
@@ -139,7 +161,7 @@ class Pong extends React.Component {
             newPos = 0;
         if (newPos > this.state.screenH)
             newPos = this.state.screenH;
-    
+
         this.setState({
             playerY: newPos,
         })
@@ -212,6 +234,16 @@ class Pong extends React.Component {
         }
     }
 
+    lost(score) {
+        if (score >= 5) {
+            console.log('lost')
+            this.setState({
+                lost: true
+            })
+        }
+
+    }
+
     ballGoalCollision() {
         let ballLeftBound = this.state.ballX - (this.state.ballWH / 2);
         let ballRightBound = this.state.ballX - (this.state.ballWH / 2);
@@ -239,7 +271,16 @@ class Pong extends React.Component {
                 ballY: this.state.ballInit.y,
             })
         }
+
+        this.lost(this.state.score.AI)
+
     }
+
+    
+
+
+
+
 
     draw(ctx) {
         ctx.clearRect(0, 0, this.state.screenW, this.state.screenH);
@@ -292,10 +333,23 @@ class Pong extends React.Component {
         ctx.fillText("PAUSED", this.state.screenW / 2, this.state.screenH / 2);
     }
 
+
     render() {
-        return (
-            <canvas ref="canvas" id='pongCanvas' width={this.state.screenW} height={this.state.screenH}/>
-        )
+
+        if (this.state.lost) {
+
+            return (
+                <div>
+                    {this.state.lost && <Skunk />}
+                </div>
+            );
+        } else {
+            return <div>
+                <canvas ref="canvas" id='pongCanvas' width={this.state.screenW} height={this.state.screenH} />
+            </div>;
+        }
+
+
     }
 }
 

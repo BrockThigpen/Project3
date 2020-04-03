@@ -8,5 +8,4 @@ const FlappyBird = () => {
 			</div>
 	)
 }
-
 export default FlappyBird

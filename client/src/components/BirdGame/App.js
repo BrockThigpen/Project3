@@ -13,12 +13,13 @@ function App(props) {
 		
 		return (
 			<div>
-				<FlyBtn/>
+				<FlyBtn />
 				<BirdContainer isGameOver={props.isGameOver}
 					handleGameOver={props.handleGameOver}
 					handleScore={props.handleScore} />
 				<PillarContainer isGameOver={props.isGameOver} />
 				<Score score={props.score} />
+				
 				{props.isGameOver && <GameOver />}
 			</div>
 		);
