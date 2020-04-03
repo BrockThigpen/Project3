@@ -245,7 +245,7 @@ class Pong extends React.Component {
 
         }
 
-        if (this.state.score.AI === 5) {
+        if (this.state.score.AI >= 5) {
            
             console.log('you suck')
         }
