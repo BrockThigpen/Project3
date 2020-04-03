@@ -1,7 +1,5 @@
 import React from "react";
 import App from "../../components/BirdGame/App";
-import puchScore from '../../pushScore'
-
 import $ from "jquery";
 import pushScore from "../../pushScore";
 
