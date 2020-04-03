@@ -18,6 +18,21 @@ const userSchema = new mongoose.Schema({
 			type: String, 
 			required: true,
 			minlength: 3 
+		},
+
+		game1:{
+			type: Number,
+			default:0
+		},
+
+		game2:{
+			type:Number,
+			default:0
+		},
+
+		game3:{
+			type:Number,
+			default:0
 		}
 	})
 
