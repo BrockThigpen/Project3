@@ -27,9 +27,9 @@ class App extends React.Component {
   render() {
     const { currentUser } = this.state
     return (
+      <div>
+      <NavBar currentUser={currentUser}/>
       <div className="AppContainer">
-        <NavBar currentUser={currentUser} />
-
         <Switch>
           <Route
             path="/login"
@@ -86,6 +86,7 @@ class App extends React.Component {
           />
           <Route path="/" component={Home} />
         </Switch>
+      </div>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import httpClient from '../httpClient'
 import { Link } from 'react-router-dom'
-import logo from '../images/appname.png'
+import logo from '../images/appname_big.png'
 
 class LogIn extends React.Component {
   state = {
@@ -34,26 +34,29 @@ class LogIn extends React.Component {
       <div className="homeContainer text-center">
         <div className="LogIn">
           <div className="row">
-            <div className="column column-33 column-offset-33">
-              <img src={logo} alt="website logo" width="80%" height="auto"/>
-              <br></br>
-              {/* <h5 className="text-white" width="80%"><strong>If you are an EXISTING user please "LOG IN". If NOT please select "SIGN UP"</strong></h5> */}
+            <div className="column">
+              <img src={logo} alt="website logo" width="90%" height="auto"/>
+              <hr></hr>
               <form
                 onChange={this.onInputChange.bind(this)}
                 onSubmit={this.onFormSubmit.bind(this)}
               >
+                <div>
                 <input
                   type="text"
                   placeholder="Email"
                   name="email"
                   value={email}
                 />
+                </div>
+                <div>
                 <input
                   type="password"
                   placeholder="Password"
                   name="password"
                   value={password}
                 />
+                </div>
                 <br></br>
                 <button className="selBtn">LOG IN</button>
                 <h5 className="text-white"><strong>OR</strong></h5>

@@ -1,6 +1,6 @@
 import React from 'react'
 import httpClient from '../httpClient'
-import logo from '../images/appname.png'
+import logo from '../images/appname_big.png'
 
 // sign up form behaves almost identically to log in form. We could create a flexible Form component to use for both actions, but for now we'll separate the two:
 class SignUp extends React.Component {
@@ -32,33 +32,29 @@ class SignUp extends React.Component {
     const { name, email, password } = this.state.fields
     return (
       <div className="homeContainer text-center">
-      <div className="SignUp">
-        <div className="row">
-          <div className="column column-33 column-offset-33">
-          <img src={logo} alt="website logo" width="80%" height="auto"/>
-              <br></br>
-            <form
-              onChange={this.onInputChange.bind(this)}
-              onSubmit={this.onFormSubmit.bind(this)}
-            >
-              <input type="text" placeholder="name" name="name" value={name} />
-              <input
-                type="text"
-                placeholder="Email"
-                name="email"
-                value={email}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={password}
-              />
-              <button className="selBtn">Sign Up</button>
-            </form>
+        <div className="SignUp">
+          <div className="row">
+            <div className="column">
+            <img src={logo} alt="website logo" width="90%" height="auto"/>
+              <hr></hr>
+              <form
+                onChange={this.onInputChange.bind(this)}
+                onSubmit={this.onFormSubmit.bind(this)}
+              >
+                <div>
+                  <input type="text" placeholder="name" name="name" value={name} />
+                  </div>
+                <div>
+                  <input type="text" placeholder="Email" name="email" value={email}/>
+                </div>
+                <div>
+                  <input type="password" placeholder="Password" name="password" value={password}/>
+                </div>
+                <button className="selBtn">Sign Up</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     )
   }

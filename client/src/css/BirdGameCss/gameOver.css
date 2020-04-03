@@ -5,11 +5,11 @@
   font-weight: bold;
   top: 150px;
   z-index: 15;
-  width: 30%;
+  width: 350px;
   height: auto;
   margin: 0 auto;
   background-color: black;
-  border-radius: 50px;
+  border-radius: 25px;
   box-shadow: 0px 0px 20px 5px white;
 }
 
@@ -27,7 +27,7 @@
   font-size: 18px;
   transition-duration: 0.4s;
   border-radius: 5px;
-  width: 50%;
+  width: 200px;
   margin: 5px 20px;
 
 }
