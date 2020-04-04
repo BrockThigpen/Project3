@@ -15,4 +15,4 @@ const Pong= () => {
 	);
 }
 
-export default Pong
+export default Pong;

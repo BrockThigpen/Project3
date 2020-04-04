@@ -19,4 +19,4 @@ usersRouter.route('/:id').patch(usersCtrl.update)
 
 usersRouter.route('/:id').delete(usersCtrl.destroy)
 
-module.exports = usersRouter
+module.exports = usersRouter 
