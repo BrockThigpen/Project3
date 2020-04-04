@@ -20,11 +20,11 @@ const userSchema = new mongoose.Schema({
 			minlength: 3 
 		},
 		game1: {
-			type: Number,
+			type: String,
 			default: 0
 		},
 		game2: {
-			type: Number,
+			type: String,
 			default: 0
 		}
 	})
