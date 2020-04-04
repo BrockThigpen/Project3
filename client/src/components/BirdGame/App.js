@@ -4,7 +4,7 @@ import PillarContainer from "../../containers/BirdContainers/PillarContainer";
 import Score from "./Score";
 import GameOver from "./GameOver";
 import StartScreen from "./StartScreen";
-import FlyBtn from './FlyBtn'
+// import FlyBtn from './FlyBtn'
 
 
 
@@ -13,7 +13,7 @@ function App(props) {
 
     return (
       <div>
-        <FlyBtn />
+        {/* <FlyBtn /> */}
         <BirdContainer isGameOver={props.isGameOver}
           handleGameOver={props.handleGameOver}
           handleScore={props.handleScore} />
