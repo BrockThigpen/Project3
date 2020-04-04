@@ -43,7 +43,6 @@ class AppContainer extends React.Component {
             score
         }, function () {
             console.log(score);
-            // insert puchScore hook here
             const game = 'game1'
             pushScore(score, game)
         });
