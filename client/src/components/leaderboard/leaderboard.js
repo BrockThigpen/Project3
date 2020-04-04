@@ -2,6 +2,12 @@ import React from "react";
 import ReactTable from 'react-table-v6';
 import 'react-table-v6/react-table.css';
 
+import { ReactTableDefaults } from 'react-table-v6'
+ 
+Object.assign(ReactTableDefaults, {
+  defaultPageSize: 15,
+})
+
 function Table({ playerData }) {
   console.log(playerData)
   return (
@@ -12,6 +18,8 @@ function Table({ playerData }) {
         {
           Header: "name",
           accessor: "name",
+          sortable: false,
+          filterable: true
         },
         {
           Header: "Dodgeball",
@@ -32,7 +40,7 @@ function Table({ playerData }) {
       defaultSorted={[
         {
           id: "game1",
-          desc: true
+          desc: true,
         }
       ]}
     />
