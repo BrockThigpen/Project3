@@ -9,23 +9,23 @@ import FlyBtn from './FlyBtn'
 
 
 function App(props) {
-	if (props.isGameStarted) {
-		
-		return (
-			<div>
-				<FlyBtn />
-				<BirdContainer isGameOver={props.isGameOver}
-					handleGameOver={props.handleGameOver}
-					handleScore={props.handleScore} />
-				<PillarContainer isGameOver={props.isGameOver} />
-				<Score score={props.score} />
-				
-				{props.isGameOver && <GameOver />}
-			</div>
-		);
-	} else {
-		return <StartScreen />;
-	}
+  if (props.isGameStarted) {
+
+    return (
+      <div>
+        <FlyBtn />
+        <BirdContainer isGameOver={props.isGameOver}
+          handleGameOver={props.handleGameOver}
+          handleScore={props.handleScore} />
+        <PillarContainer isGameOver={props.isGameOver} />
+        <Score score={props.score} />
+
+        {props.isGameOver && <GameOver />}
+      </div>
+    );
+  } else {
+    return <StartScreen />;
+  }
 }
 
 export default App;
