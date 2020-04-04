@@ -14,9 +14,9 @@ const pushScore = (score, game) => {
           }
         }).then(user => {
           if (score > user.data.game1) {
-            let strScore = parseInt(score);
+            // let strScore = parseInt(score);
             axios.patch(window.location.origin + '/api/users/' + user.data._id,
-              { game1: strScore }, { headers: { 'token': token }},
+              { game1: score }, { headers: { 'token': token }},
               (err, res) => {
                 if (err) return console.log(err);
               }
@@ -32,9 +32,9 @@ const pushScore = (score, game) => {
           }
         }).then(user => {
           if (score > user.data.game2) {
-            let strScore = parseInt(score);
+            // let strScore = parseInt(score);
             axios.patch(window.location.origin + '/api/users/' + user.data._id,
-              { game2: strScore }, { headers: { 'token': token }},
+              { game2: score }, { headers: { 'token': token }},
               (err, res) => {
                 if (err) return console.log(err);
               }
