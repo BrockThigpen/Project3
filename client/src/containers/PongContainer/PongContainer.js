@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../css/PongCss/pong.css'
-
 import Skunk from '../../components/Pong/Skunk'
 
 
@@ -60,6 +59,9 @@ class Pong extends React.Component {
 
     }
 
+    // <button className="mobileBtnPong">Up</button>
+//     <UpBtn />
+// <DownBtn />
 
 
     componentDidMount() {
@@ -352,6 +354,7 @@ class Pong extends React.Component {
 
 
     }
+
 }
 
 export default Pong;
