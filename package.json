@@ -22,11 +22,11 @@
     "jquery": "^3.3.1",
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.15",
-    "mdbootstrap": "^4.14.1",
+    "mdbootstrap": "^4.15.0",
     "mongoose": "5.7.5",
     "morgan": "^1.9.1",
     "npm": "^6.5.0",
-    "react-table": "^7.0.4"
+    "react-table-v6": "^6.8.6"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",

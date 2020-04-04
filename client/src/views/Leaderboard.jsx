@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Table from '../components/leaderboard/leaderboard';
 
 const Leaderboard = () => {
   const [playerData, setPlayerData] = useState([]);
   const [error, setError] = useState('');
-
   useEffect(() => {
-    axios
-      .get(window.location.origin + '/api/users')
-      .then((res) => {
+    axios.get(window.location.origin + '/api/users')
+      .then(res => {
         setPlayerData(res.data);
       })
-      .catch((err) => setError(err));
+      .catch(err => setError(err));
   }, []);
-  console.log(playerData);
-  return <></>;
-};
+  return (
+    <Table
+    playerData={playerData}
+  />
+  )}
 
 export default Leaderboard;
