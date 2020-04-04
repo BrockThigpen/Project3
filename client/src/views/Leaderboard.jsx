@@ -1,20 +1,20 @@
-import React from 'react';
-// import axios from 'axios';
-// import httpClient from '../httpClient';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Leaderboard = () => {
-  // get current user
-  // const user = httpClient.getCurrentUser();
-  // console.log(user._id);
-  // get all users
-  // axios.patch(window.location.origin + '/api/users/' + user._id);
-  // .then(res => console.log(res.data));
+  const [playerData, setPlayerData] = useState([]);
+  const [error, setError] = useState('');
 
-  return (
-    <div>
-      <h1>hello world</h1>
-    </div>
-  );
+  useEffect(() => {
+    axios
+      .get(window.location.origin + '/api/users')
+      .then((res) => {
+        setPlayerData(res.data);
+      })
+      .catch((err) => setError(err));
+  }, []);
+  console.log(playerData);
+  return <></>;
 };
 
 export default Leaderboard;
