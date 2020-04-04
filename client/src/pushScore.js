@@ -13,7 +13,6 @@ const pushScore = (score, game) => {
             'token': token
           }
         }).then(user => {
-          console.log(user.data.game1)
           if (score > user.data.game1) {
             axios.patch(window.location.origin + '/api/users/' + user.data._id,
               { game1: score }, { headers: { 'token': token }},
@@ -31,7 +30,6 @@ const pushScore = (score, game) => {
             'token': token
           }
         }).then(user => {
-          console.log(user.data.game2)
           if (score > user.data.game2) {
             axios.patch(window.location.origin + '/api/users/' + user.data._id,
               { game2: score }, { headers: { 'token': token }},
