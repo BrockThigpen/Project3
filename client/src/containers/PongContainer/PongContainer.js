@@ -1,7 +1,6 @@
 import React from 'react';
 import pushScore from '../../pushScore.js'
 import '../../css/PongCss/pong.css'
-
 import Skunk from '../../components/Pong/Skunk'
 
 class Pong extends React.Component {
@@ -307,7 +306,7 @@ class Pong extends React.Component {
 	}
 
 	drawAI(ctx) {
-		ctx.fillStyle = "blue";
+		ctx.fillStyle = "red";
 		let x = this.state.aiX - this.state.playerW / 2;
 		let y = this.state.aiY - this.state.playerH / 2;
 		ctx.fillRect(x, y, this.state.playerW, this.state.playerH);
