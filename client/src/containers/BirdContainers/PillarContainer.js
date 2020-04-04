@@ -49,7 +49,7 @@ export default class PillarContainer extends React.Component {
 						style={{
 							position: "absolute",
 							height: topHeight,
-							// marginBottom: "100px",
+							marginBottom: "100px",
 							left: this.leftMargin + "px",
 							width: "50px",
 							backgroundColor: "white"
@@ -64,7 +64,7 @@ export default class PillarContainer extends React.Component {
 						style={{
 							position: "absolute",
 							height: bottomHeight,
-							top: topHeight + 120,
+							top: topHeight + 150,
 							left: this.leftMargin + "px",
 							width: "50px",
 							backgroundColor: "white"
@@ -102,7 +102,7 @@ export default class PillarContainer extends React.Component {
 					style={{
 						position: "absolute",
 						height: topHeight,
-						// marginBottom: "100px",
+						marginBottom: "100px",
 						left: this.leftMargin + "px",
 						width: "50px",
 						backgroundColor: "white"
@@ -118,7 +118,7 @@ export default class PillarContainer extends React.Component {
 					style={{
 						position: "absolute",
 						height: bottomHeight,
-						top: topHeight + 120,
+						top: topHeight + 150,
 						left: this.leftMargin + "px",
 						width: "50px",
 						backgroundColor: "white"
