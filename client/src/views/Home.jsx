@@ -10,7 +10,7 @@ const Home = props => {
       </h1>
       <br></br>
       <img src={logo} alt="website logo" width="80%" height="auto" />
-      <hr className="my-4" style={{ border: '3px solid red', margin: '15%' }} />
+      <hr className="newLine" />
       <br></br>
       <h4>
         <strong className="text-white">
