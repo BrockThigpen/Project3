@@ -36,7 +36,7 @@ class LogIn extends React.Component {
           <div className="row">
             <div className="column">
               <img src={logo} alt="website logo" width="90%" height="auto"/>
-              <hr></hr>
+              <hr className="newLine"></hr>
               <form
                 onChange={this.onInputChange.bind(this)}
                 onSubmit={this.onFormSubmit.bind(this)}

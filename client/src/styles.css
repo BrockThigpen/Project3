@@ -22,7 +22,7 @@ a{
 }
 a:hover{
   color: red;
-  text-decoration:none;
+  text-decoration: none;
 }
 h5{
   margin: 2px 0px 2px;
@@ -57,7 +57,7 @@ body {
   font-size: 18px;
   transition-duration: 0.4s;
   border-radius: 5px;
-  width: 20%;
+  width: 150px;
 }
 
 .selBtn:hover, .selBtn2:hover, .gameBtn:hover, .gameBtn2:hover {
@@ -84,23 +84,27 @@ body {
 }
 .gameApps{
   border-radius: 25px;
-  height: 400px;
+  height: 250px;
   width: auto;
   box-shadow: 0px 0px 5px 1px white;
   margin: 20px;
+}
+.container{
+  padding-left: none;
+  padding-right: none;
+  padding: 0 0;
 }
 .AppContainer{
   position: absolute;
   top: 0px;
   left: 5%;
   padding-top: 100px;
-  padding-right: 20px;
-  padding-left: 20px;
   background-color: black;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   box-shadow: 0px 0px 20px 15px red;
 }
 
@@ -111,7 +115,7 @@ input[type='password'] {
   padding-right: 50px;
 }
 
-hr{
+.newLine{
   border-top: 2px solid red;
   margin-left: auto;
   margin-right: auto;
@@ -119,3 +123,52 @@ hr{
   margin-bottom: 20px;
   width: 80%;
 }
+
+.ReactTable{
+  table-layout: fixed;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  
+}
+.rt-table{
+  box-shadow: 0px 0px 100px 5px white;
+  background-color: rgb(51, 49, 49);
+  margin-bottom: 20px;
+}
+.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td{
+  height: 50px;
+  border: white;
+  border-width: 5px;
+  border-style: solid;
+}
+.ReactTable .rt-thead .rt-resizable-header-content{
+  padding-top: 5px;
+  font-size: 20px;
+  color: white;
+}
+.ReactTable .rt-th, .ReactTable .rt-td{
+  border: white;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  color: white;
+  padding: none;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.ReactTable .rt-thead .rt-th:last-child, .ReactTable .rt-thead .rt-td:last-child{
+  border-right: white;
+  border-width: 5px;
+  border-style: solid;
+}
+.rt-th .rt-resizable-header .-cursor-pointer.style{
+  max-width: none;
+  width: 33%;
+}
+
+.ReactTable .rt-tbody .rt-td{
+  border-right: none;
+}
+
