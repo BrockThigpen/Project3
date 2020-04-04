@@ -3,7 +3,10 @@ import { render } from 'react-dom'
 import PongContainer from '../containers/PongContainer/PongContainer'
 const Pong= () => {
 	return (
-			render(<PongContainer/>, document.getElementById('root'))
+		<div className="gameContainer text-center">
+		<PongContainer />
+		</div>
+			// render(<PongContainer/>, document.getElementById('root'))
 		
 	)
 }
