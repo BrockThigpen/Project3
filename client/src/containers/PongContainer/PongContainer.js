@@ -299,6 +299,7 @@ class Pong extends React.Component {
 
     drawBall(ctx) {
         ctx.fillStyle = "white";
+        
         let x = this.state.ballX - this.state.ballWH / 2;
         let y = this.state.ballY - this.state.ballWH / 2;
         ctx.fillRect(x, y, this.state.ballWH, this.state.ballWH);
@@ -312,7 +313,7 @@ class Pong extends React.Component {
     }
 
     drawAI(ctx) {
-        ctx.fillStyle = "blue";
+        ctx.fillStyle = "red";
         let x = this.state.aiX - this.state.playerW / 2;
         let y = this.state.aiY - this.state.playerH / 2;
         ctx.fillRect(x, y, this.state.playerW, this.state.playerH);
