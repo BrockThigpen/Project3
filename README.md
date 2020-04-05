@@ -30,9 +30,10 @@ When the users first access the site, the user will be greeted with a landing pa
 
 <img src="./client/src/images/gamecenter.jpg" alt="gamecenter"/>
 
-## How It Works
+## Dodgeball
 If the user selects Dodgeball, they will be taken into the game and be prompted with instructions on how to start the game. "Press Spacebar To Begin." Once spacebar is pressed the game is started and the user can then navigate their way through the pillars of Dodgeball. If it is the users first time playing, the score will save in the leaderboard upon their first collision with a pillar. If the user is a returning user then the score in the leaderboard will only update if their current score is higher than their previous score stored in the leaderboard. 
 
-
-
 <img src="./client/src/images/dodgeball.jpg" alt="dodgeball"/>
+
+<img src="./client/src/images/dodgeballgameover.jpg" alt="gameover"/>
+
