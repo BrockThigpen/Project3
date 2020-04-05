@@ -27,3 +27,5 @@ You will also see any lint errors in the console.
 ## How It Works
 When the users first access the site, the user will be greeted with a landing page which they have the choice to login if they already have an account. If they do not have an account they can set one up in a matter of seconds by entering a username, email and password. 
 
+
+<img src="./client/src/images/gamecenter.jpg" alt="gamecenter"/>
