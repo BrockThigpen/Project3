@@ -25,7 +25,13 @@ You will also see any lint errors in the console.
 
 
 ## How It Works
-When the users first access the site, the user will be greeted with a landing page which they have the choice to login if they already have an account. If they do not have an account they can set one up in a matter of seconds by entering a username, email and password. 
+When the users first access the site, the user will be greeted with a landing page which they have the choice to login if they already have an account. If they do not have an account they can set one up in a matter of seconds by entering a username, email and password. After an a successful login the user will be redirected to the game center where they can now select a game to play.
 
 
 <img src="./client/src/images/gamecenter.jpg" alt="gamecenter"/>
+
+## How It Works
+If the user selects Dodgeball, they will be taken into the game and be prompted with instructions on how to start the game. "Press Spacebar To Begin." Once spacebar is pressed the game is started and the user can then navigate their way through the pillars of Dodgeball. If it is the users first time playing, the score will save in the leaderboard upon their first collision with a pillar. If the user is a returning user then the score in the leaderboard will only update if their current score is higher than their previous score stored in the leaderboard. 
+
+
+
