@@ -35,3 +35,4 @@ If the user selects Dodgeball, they will be taken into the game and be prompted 
 
 
 
+<img src="./client/src/images/dodgeball.jpg" alt="dodgeball"/>
