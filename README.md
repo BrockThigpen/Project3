@@ -33,7 +33,16 @@ When the users first access the site, the user will be greeted with a landing pa
 ## Dodgeball
 If the user selects Dodgeball, they will be taken into the game and be prompted with instructions on how to start the game. "Press Spacebar To Begin." Once spacebar is pressed the game is started and the user can then navigate their way through the pillars of Dodgeball. If it is the users first time playing, the score will save in the leaderboard upon their first collision with a pillar. If the user is a returning user then the score in the leaderboard will only update if their current score is higher than their previous score stored in the leaderboard. 
 
+<img src="./client/src/images/dodgeballstartscreen.jpg" alt="startscreen"/>
+
 <img src="./client/src/images/dodgeball.jpg" alt="dodgeball"/>
 
 <img src="./client/src/images/dodgeballgameover.jpg" alt="gameover"/>
+
+## Pong
+If the user selects Pong, they will be taken into the game, this game will run as soon as the page is loaded so be ready, User the "up" and "down" arrow keys to control your slider on the left hand side of the viewport. If it is the users first time playing, the score will save in the leaderboard upon their first loss to AI. In this game if the AI gets a score of 5 then you automatically lose. If the user is a returning user then the score in the leaderboard will only update if their current score is higher than their previous score stored in the leaderboard. 
+
+<img src="./client/src/images/pongstart.jpg" alt="pongstart"/>
+
+<img src="./client/src/images/ponggameover.jpg" alt="ponggameover"/>
 
