@@ -78,6 +78,6 @@ The leaderboard page can only be viewed once the user has successfully logged in
 </ul>
 
 ## View
-View my deployed application here:
+View the deployed application here:
 
 <a href="https://reactgames.herokuapp.com/">React Games</a>
