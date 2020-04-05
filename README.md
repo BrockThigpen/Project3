@@ -25,7 +25,7 @@ You will also see any lint errors in the console.
 
 
 ## How It Works
-When the users first access the site, the user will be greeted with a landing page which they have the choice to login if they already have an account. If they do not have an account they can set one up in a matter of seconds by entering a username, email and password. After an a successful login the user will be redirected to the game center where they can now select a game to play.
+When the users first access the site, the user will be greeted with a landing page which they have the choice to login if they already have an account. If they do not login, no games or leaderboard pages will able to be accessed. If they do not have an account they can set one up in a matter of seconds by entering a username, email and password. After a successful login the user will be redirected to the game center where they can now select a game to play.
 
 
 <img src="./client/src/images/gamecenter.jpg" alt="gamecenter"/>
