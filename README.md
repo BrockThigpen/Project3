@@ -46,5 +46,38 @@ If the user selects Pong, they will be taken into the game, this game will run a
 
 <img src="./client/src/images/ponggameover.jpg" alt="ponggameover"/>
 
+## Leaderboard
+The leaderboard page can only be viewed once the user has successfully logged in. Here the user can search their high scores or a friends by username. They can also sort the scores highest-lowest or lowest to highest. 
+
+<img src="./client/src/images/leaderboard.jpg" alt="leaderboard"/>
+
+<img src="./client/src/images/sortleaderboard.jpg" alt="sortleaderboard"/>
+
+<img src="./client/src/images/searchleaderboard.jpg" alt="searchleaderboard"/>
+
+## Technologies
+<ul>
+<li>JWT Authentication</li>
+<li>React.js</li>
+<li>JavaScript</li>
+<li>Express</li>
+<li>MongoDB</li>
+<li>Mongoose</li>
+<li>bcrypt</li>
+<li>React-Table</li>
+<li>Heroku Hosting</li>
+</ul>
 
 
+## Creators
+<ul>
+<li>Brock Thigpen - Back end - React, Javascript, Database, Authentication, React Table implentation</li>
+<li>Brandon "Tyler" Cauley - Front end - Game Integration, Back end - Game integration, React, Javascript</li>
+<li>Josh Craig - Designing the UI, Wireframe, Styling, Layout, Theme</li>
+<li>Patrick Dorgu - React Table - Leaderboard</li>
+</ul>
+
+## View
+View my deployed application here:
+
+<a href="https://reactgames.herokuapp.com/">React Games</a>
