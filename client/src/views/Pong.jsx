@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from 'react-dom'
 import PongContainer from '../containers/PongContainer/PongContainer'
 import upBtn from '../components/Pong/upBtn'
 import downBtn from '../components/Pong/downBtn'

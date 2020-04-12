@@ -3,8 +3,6 @@ import App from "../../components/BirdGame/App";
 import $ from "jquery";
 import pushScore from "../../pushScore";
 
-
-
 class AppContainer extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +10,8 @@ class AppContainer extends React.Component {
         this.state = {
             isGameOver: false,      // isGameOver is set to 'true' when the user either touches the pillar, roof or ground
             score: 0,               // Score of user
-            isGameStarted: false    // Indicator to start the game when spacebar is pressed
+            isGameStarted: false ,
+            isSpaceBarPressed: false   // Indicator to start the game when spacebar is pressed
         };
 
         // In JavaScript, class methods are not bound by default.
@@ -20,7 +19,20 @@ class AppContainer extends React.Component {
         // is actually called.
         this.handleGameOver = this.handleGameOver.bind(this);
         this.handleScore = this.handleScore.bind(this);
+        this.isSpaceBarPressed = this.handleTap.bind(this);
+
     }
+    handleTap (e) {
+        console.log(this.isSpaceBarPressed)
+        if($("body").onTap(e)){
+        this.setState({
+            isSpaceBarPressed: true
+        })
+        console.log(this.isSpaceBarPressed)
+    }
+    console.log(this.isSpaceBarPressed)
+    }
+
 
     componentDidMount() {
         $("body").keypress((e) => {
@@ -29,6 +41,7 @@ class AppContainer extends React.Component {
                     isGameStarted: true
                 });
             }
+
         });
     }
 
@@ -49,15 +62,20 @@ class AppContainer extends React.Component {
     }
 
     render() {
+        
         let isGameOver = this.state.isGameOver;
         let score = this.state.score;   
-        let isGameStarted = this.state.isGameStarted;     
-        return <App
-            isGameOver={isGameOver}
-            isGameStarted={isGameStarted}
-            score={score}
-            handleGameOver={this.handleGameOver}
-            handleScore={this.handleScore} />;
+        let isGameStarted = this.state.isGameStarted;
+     
+            
+        return( 
+                <App
+                isGameOver={isGameOver} 
+                isGameStarted={isGameStarted}
+                score={score}
+                handleGameOver={this.handleGameOver}
+                handleScore={this.handleScore} />
+        )
     }
 }
 
