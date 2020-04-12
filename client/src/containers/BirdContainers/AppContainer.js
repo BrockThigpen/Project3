@@ -22,18 +22,26 @@ class AppContainer extends React.Component {
         // $("body").mousedown((e) => this.handleMouseDown(e));
 
     }
-//     handleMouseDown = (e) => {
-//         if($("body").mousedown((e))){
-//         this.setState({
-//             isGameStarted: true
-//         })
-//     }
-// };
 
+    // componentWillMount() {
+    //     $("body").mousedown((e) => {
+    //         if ($('body').mousedown(e)) {
+    //             this.setState({
+    //                 isGameStarted: true
+    //             });
+    //         }
+
+    //     });
+    // }
 
     componentDidMount() {
         $("body").keypress((e) => {
             if (e.keyCode === 32) {
+                this.setState({
+                    isGameStarted: true
+                });
+            }
+            if ($("body").mousedown = (e)) {
                 this.setState({
                     isGameStarted: true
                 });

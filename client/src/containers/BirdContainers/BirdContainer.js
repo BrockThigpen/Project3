@@ -38,7 +38,48 @@ export default class BirdContainer extends React.Component {
 
 		}
 	
-		handleMouseDown = (e)=> {
+		handleKeyPress(e) {
+			let self = this;
+			if (e.keyCode === 32 && !this.props.isGameOver) {
+			// Spacebar clicked and game is not yet over
+			this.isSpaceBarClicked = true;
+			let birdHeight = $("#bird").position().top;
+			if (birdHeight > 40) {
+				// Bird is below roof
+				$("#bird").animate(
+					{
+						top: "-=50px" // Subtract from the top on the click of spacebar to elevate the bird
+					},
+					120,        // Perform the animation every 120ms
+					"linear",   // For smooth transition of animation
+					() => {
+						// After animation is completed
+						self.isSpaceBarClicked = false;
+						let elements = document.getElementsByClassName("pillar");
+						if (self.collisionOccurred($("#bird"), $(elements[0]), $(elements[1]))) {
+							// self.isGameOver = true;
+							self.props.handleGameOver(true);
+						} else {
+							let rect = elements[0].getBoundingClientRect();
+							if ((oldPillar !== elements[0]) && $("#bird").position().left > rect.left) {
+								self.score++;
+								self.props.handleScore(self.score);
+								oldPillar = elements[0];
+							}
+							// console.log(rect.left + " " + Math.round(rect.width));
+						}
+					}
+				);
+			} else {
+				// this.isGameOver = true;
+				self.props.handleGameOver(true);    // The bird touched the roof, game over!
+				this.isSpaceBarClicked = false;
+			}
+		}
+		console.log(this.isSpaceBarClicked)
+	}
+	
+	handleMouseDown = (e)=> {
 		let self = this;
 		if ($('body').mousedown(e) && !this.props.isGameOver) {
 			// Spacebar clicked and game is not yet over
@@ -78,52 +119,6 @@ export default class BirdContainer extends React.Component {
 		}
 		console.log(this.isSpaceBarClicked)
 	}
-	
-	handleTap(event) {
-		// let onTap = $("body").on(e);
-
- 		console.log(event)
-		let self = this;
-		if ($('#fly').onClick && !this.props.isGameOver) {
-			console.log(event)
-			// Spacebar clicked and game is not yet over
-			this.isSpaceBarClicked = true;
-			let birdHeight = $("#bird").position().top;
-			if (birdHeight > 40) {
-				// Bird is below roof
-				$("#bird").animate(
-					{
-						top: "-=50px" // Subtract from the top on the click of spacebar to elevate the bird
-					},
-					120,        // Perform the animation every 120ms
-					"linear",   // For smooth transition of animation
-					() => {
-						// After animation is completed
-						self.isSpaceBarClicked = false;
-						let elements = document.getElementsByClassName("pillar");
-						if (self.collisionOccurred($("#bird"), $(elements[0]), $(elements[1]))) {
-							// self.isGameOver = true;
-							self.props.handleGameOver(true);
-						} else {
-							let rect = elements[0].getBoundingClientRect();
-							if ((oldPillar !== elements[0]) && $("#bird").position().left > rect.left) {
-								self.score++;
-								self.props.handleScore(self.score);
-								oldPillar = elements[0];
-							}
-							// console.log(rect.left + " " + Math.round(rect.width));
-						}
-					}
-				);
-			} else {
-				// this.isGameOver = true;
-				self.props.handleGameOver(true);    // The bird touched the roof, game over!
-				this.isSpaceBarClicked = false;
-			}
-		}
-		console.log(event)
-	}
-
 
 	// Function that keeps the bird falling
 	fallDown() {
