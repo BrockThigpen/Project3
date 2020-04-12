@@ -19,19 +19,16 @@ class AppContainer extends React.Component {
         // is actually called.
         this.handleGameOver = this.handleGameOver.bind(this);
         this.handleScore = this.handleScore.bind(this);
-        this.isSpaceBarPressed = this.handleTap.bind(this);
+        // $("body").mousedown((e) => this.handleMouseDown(e));
 
     }
-    handleTap (e) {
-        console.log(this.isSpaceBarPressed)
-        if($("body").onTap(e)){
-        this.setState({
-            isSpaceBarPressed: true
-        })
-        console.log(this.isSpaceBarPressed)
-    }
-    console.log(this.isSpaceBarPressed)
-    }
+//     handleMouseDown = (e) => {
+//         if($("body").mousedown((e))){
+//         this.setState({
+//             isGameStarted: true
+//         })
+//     }
+// };
 
 
     componentDidMount() {
@@ -62,11 +59,10 @@ class AppContainer extends React.Component {
     }
 
     render() {
-        
+
         let isGameOver = this.state.isGameOver;
         let score = this.state.score;   
         let isGameStarted = this.state.isGameStarted;
-     
             
         return( 
                 <App

@@ -2,7 +2,6 @@ import React from "react";
 import $ from "jquery";
 import Bird from "../../components/BirdGame/Bird.js";
 import "../../css/BirdGameCss/main.css";
-import ReactTouchEvents from "react-touch-events";
 var oldPillar;
 
 
@@ -20,6 +19,7 @@ export default class BirdContainer extends React.Component {
 
 		this.isSpaceBarClicked = false;
 
+
 		// In JavaScript, class methods are not bound by default.
 		// If you forget to bind this.fallDown and pass it to onClick, this will be undefined when the function
 		// is actually called.
@@ -34,13 +34,13 @@ export default class BirdContainer extends React.Component {
 			// No need to bind the handleKeyPress() in constructor as we are using arrow function
 			$("body").keypress((e) => this.handleKeyPress(e));
 			// document.getElementById("body").onTap = this.handleTap(onTap);
-			$("body").on((e) => this.handleTap(e));
+			$("body").mousedown((e) => this.handleMouseDown(e));
 
 		}
 	
-		handleKeyPress(e) {
+		handleMouseDown = (e)=> {
 		let self = this;
-		if (e.keyCode === 32 && !this.props.isGameOver) {
+		if ($('body').mousedown(e) && !this.props.isGameOver) {
 			// Spacebar clicked and game is not yet over
 			this.isSpaceBarClicked = true;
 			let birdHeight = $("#bird").position().top;
@@ -79,13 +79,13 @@ export default class BirdContainer extends React.Component {
 		console.log(this.isSpaceBarClicked)
 	}
 	
-	handleTap(e) {
+	handleTap(event) {
 		// let onTap = $("body").on(e);
 
- 		console.log(e)
+ 		console.log(event)
 		let self = this;
-		if (this.e && !this.props.isGameOver) {
-			console.log(e)
+		if ($('#fly').onClick && !this.props.isGameOver) {
+			console.log(event)
 			// Spacebar clicked and game is not yet over
 			this.isSpaceBarClicked = true;
 			let birdHeight = $("#bird").position().top;
@@ -121,7 +121,7 @@ export default class BirdContainer extends React.Component {
 				this.isSpaceBarClicked = false;
 			}
 		}
-		console.log(e)
+		console.log(event)
 	}
 
 
@@ -180,10 +180,9 @@ export default class BirdContainer extends React.Component {
 	}
 	render() {
 		return (
-			<ReactTouchEvents
-        onTaop = {this.handleTap.bind(this)}>
+		
 				<Bird />
-				</ReactTouchEvents>
+	
 		)
 				
 	}

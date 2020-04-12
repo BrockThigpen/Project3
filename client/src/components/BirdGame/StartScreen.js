@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import "../../css/BirdGameCss/startScreen.css";
 
-
 function StartScreen(props) {
     return (
         <div className="text-center" id="startScreen">
