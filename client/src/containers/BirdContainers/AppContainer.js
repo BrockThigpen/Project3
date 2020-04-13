@@ -19,29 +19,22 @@ class AppContainer extends React.Component {
         // is actually called.
         this.handleGameOver = this.handleGameOver.bind(this);
         this.handleScore = this.handleScore.bind(this);
-        // $("body").mousedown((e) => this.handleMouseDown(e));
+        $("body").mousedown((e) => this.handleGameStarted(e));
 
     }
 
-    // componentWillMount() {
-    //     $("body").mousedown((e) => {
-    //         if ($('body').mousedown(e)) {
-    //             this.setState({
-    //                 isGameStarted: true
-    //             });
-    //         }
+    handleGameStarted(e){
+        if ($("body").mousedown(e)) {
+            this.setState({
+                isGameStarted: true
+            });
+        }
+    }
 
-    //     });
-    // }
-
+    
     componentDidMount() {
         $("body").keypress((e) => {
             if (e.keyCode === 32) {
-                this.setState({
-                    isGameStarted: true
-                });
-            }
-            if ($("body").mousedown = (e)) {
                 this.setState({
                     isGameStarted: true
                 });

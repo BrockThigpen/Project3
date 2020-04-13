@@ -34,7 +34,10 @@ export default class BirdContainer extends React.Component {
 			// No need to bind the handleKeyPress() in constructor as we are using arrow function
 			$("body").keypress((e) => this.handleKeyPress(e));
 			// document.getElementById("body").onTap = this.handleTap(onTap);
-			$("body").mousedown((e) => this.handleMouseDown(e));
+			$(".gameContainer.text-center").mousedown((e) => this.handleMouseDown(e));
+			
+			$("body").mousedown((e) => this.handleGameStarted(e));
+
 
 		}
 	
@@ -81,7 +84,7 @@ export default class BirdContainer extends React.Component {
 	
 	handleMouseDown = (e)=> {
 		let self = this;
-		if ($('body').mousedown(e) && !this.props.isGameOver) {
+		if ($('.gameContainer.text-center').mousedown(e) && !this.props.isGameOver) {
 			// Spacebar clicked and game is not yet over
 			this.isSpaceBarClicked = true;
 			let birdHeight = $("#bird").position().top;

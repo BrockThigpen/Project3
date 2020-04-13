@@ -10,6 +10,7 @@ function StartScreen(props) {
             <Link to="/Games">
                 <button className="gameBtn2">Go Back</button>
             </Link>
+            <button className="gameBtn2" id='startGame' onMouseDown={props.isGameStarted}>Start Game</button>
         </div>
     );
 }
