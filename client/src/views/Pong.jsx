@@ -1,7 +1,5 @@
 import React from 'react'
 import PongContainer from '../containers/PongContainer/PongContainer'
-import upBtn from '../components/Pong/upBtn'
-import downBtn from '../components/Pong/downBtn'
 
 const Pong= () => {
 	return (
@@ -10,7 +8,6 @@ const Pong= () => {
 		<upBtn />
 		<downBtn />
 		</div>
-			// render(<PongContainer/>, document.getElementById('root'))
 	);
 }
 

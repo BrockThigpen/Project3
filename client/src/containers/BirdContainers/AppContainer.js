@@ -17,6 +17,7 @@ class AppContainer extends React.Component {
         // In JavaScript, class methods are not bound by default.
         // If you forget to bind this.handleGameOver, this.handleScore and pass it to onClick, this will be undefined when the function
         // is actually called.
+        
         this.handleGameOver = this.handleGameOver.bind(this);
         this.handleScore = this.handleScore.bind(this);
         $("body").mousedown((e) => this.handleGameStarted(e));
