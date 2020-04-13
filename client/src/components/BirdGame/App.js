@@ -17,17 +17,14 @@ function App(props) {
         <PillarContainer isGameOver={props.isGameOver} />
         <Score score={props.score} />
         {props.isGameOver && <GameOver />}
-        
-       
       </div>
     );
     
   } else {
     return (
-      <div>
       
       <StartScreen />
-      </div>
+
     )
   }
 

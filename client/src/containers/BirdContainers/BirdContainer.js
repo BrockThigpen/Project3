@@ -34,13 +34,16 @@ export default class BirdContainer extends React.Component {
 			// No need to bind the handleKeyPress() in constructor as we are using arrow function
 			$("body").keypress((e) => this.handleKeyPress(e));
 			// document.getElementById("body").onTap = this.handleTap(onTap);
-			$("body").mousedown((e) => this.handleMouseDown(e));
+			$(".gameContainer.text-center").mousedown((e) => this.handleMouseDown(e));
+			
+			$("body").mousedown((e) => this.handleGameStarted(e));
+
 
 		}
 	
-		handleMouseDown = (e)=> {
-		let self = this;
-		if ($('body').mousedown(e) && !this.props.isGameOver) {
+		handleKeyPress(e) {
+			let self = this;
+			if (e.keyCode === 32 && !this.props.isGameOver) {
 			// Spacebar clicked and game is not yet over
 			this.isSpaceBarClicked = true;
 			let birdHeight = $("#bird").position().top;
@@ -79,13 +82,9 @@ export default class BirdContainer extends React.Component {
 		console.log(this.isSpaceBarClicked)
 	}
 	
-	handleTap(event) {
-		// let onTap = $("body").on(e);
-
- 		console.log(event)
+	handleMouseDown = (e)=> {
 		let self = this;
-		if ($('#fly').onClick && !this.props.isGameOver) {
-			console.log(event)
+		if ($('.gameContainer.text-center').mousedown(e) && !this.props.isGameOver) {
 			// Spacebar clicked and game is not yet over
 			this.isSpaceBarClicked = true;
 			let birdHeight = $("#bird").position().top;
@@ -121,9 +120,8 @@ export default class BirdContainer extends React.Component {
 				this.isSpaceBarClicked = false;
 			}
 		}
-		console.log(event)
+		console.log(this.isSpaceBarClicked)
 	}
-
 
 	// Function that keeps the bird falling
 	fallDown() {
