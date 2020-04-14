@@ -7,7 +7,7 @@ const Leaderboard = () => {
   const [error, setError] = useState('');
   useEffect(() => {
     axios
-      .get(window.location.origin + '/api/users')
+      .get('/api/users')
       .then((res) => {
         setPlayerData(res.data);
       })

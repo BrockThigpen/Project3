@@ -7,7 +7,7 @@ const pushScore = (score, game) => {
   const token = httpClient.getToken();
   switch (game) {
     case 'game1':
-        axios.get(window.location.origin + '/api/users/' + user._id,
+        axios.get(`/api/users/${user._id}`,
         {
           headers: {
             'token': token
@@ -15,7 +15,7 @@ const pushScore = (score, game) => {
         }).then(user => {
           if (score > user.data.game1) {
             // let strScore = parseInt(score);
-            axios.patch(window.location.origin + '/api/users/' + user.data._id,
+            axios.patch(`/api/users/${user.data._id}`,
               { game1: score }, { headers: { 'token': token }},
               (err, res) => {
                 if (err) return console.log(err);
@@ -25,7 +25,7 @@ const pushScore = (score, game) => {
         })
       break;
     case 'game2':
-      axios.get(window.location.origin + '/api/users/' + user._id,
+      axios.get(`/api/users/${user._id}`,
         {
           headers: {
             'token': token
@@ -33,7 +33,7 @@ const pushScore = (score, game) => {
         }).then(user => {
           if (score > user.data.game2) {
             // let strScore = parseInt(score);
-            axios.patch(window.location.origin + '/api/users/' + user.data._id,
+            axios.patch(`/api/users/${user.data._id}`,
               { game2: score }, { headers: { 'token': token }},
               (err, res) => {
                 if (err) return console.log(err);
