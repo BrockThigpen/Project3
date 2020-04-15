@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Table from '../components/leaderboard/leaderboard';
+import { Offline, Online } from 'react-detect-offline';
 
 const Leaderboard = () => {
   const [playerData, setPlayerData] = useState([]);
@@ -13,7 +14,14 @@ const Leaderboard = () => {
       })
       .catch((err) => setError(err));
   }, []);
-  return <Table playerData={playerData} />;
+  return (
+    <div class="text-center">
+      <Online>
+        <Table playerData={playerData} />
+      </Online>
+      <Offline>No network detected. Please reconnect to a network.</Offline>
+    </div>
+  );
 };
 
 export default Leaderboard;
