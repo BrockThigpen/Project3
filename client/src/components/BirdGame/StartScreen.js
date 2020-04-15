@@ -8,7 +8,7 @@ function StartScreen(props) {
             <div className="flappyStart">
                 <p><strong>Press space bar  OR tap screen to start the game...</strong></p></div>
             <Link to="/Games">
-                <button className="gameBtn2">Go Back</button>
+                <button id='backBtn' className="gameBtn2">Go Back</button>
             </Link>
         </div>
     );

@@ -9,7 +9,6 @@ Object.assign(ReactTableDefaults, {
 })
 
 function Table({ playerData }) {
-  console.log(playerData)
   return (
 
     <ReactTable
