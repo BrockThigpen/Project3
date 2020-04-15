@@ -26,6 +26,7 @@
     "mongoose": "5.7.5",
     "morgan": "^1.9.1",
     "npm": "^6.5.0",
+    "react-detect-offline": "^2.4.0",
     "react-table-v6": "^6.8.6",
     "react-touch-events": "^2.1.0"
   },
