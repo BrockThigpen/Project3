@@ -1,7 +1,7 @@
 {
-  "name": "rthauthserver",
+  "name": "reactgames",
   "version": "1.0.0",
-  "description": "Sample security protocol",
+  "description": "Simple fun Games",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
