@@ -3,7 +3,6 @@ import Field from '../../components/Snake/Field';
 import Status from '../../components/Snake/Status';
 import Info from '../../components/Snake/Info';
 import Move from '../../components/Snake/Move';
-import Header from '../../components/Snake/Header';
 import {
   SIZE,
   START_X,
@@ -141,7 +140,7 @@ class App extends Component {
     } = this.state;
     return (
       <div className={`app  width-${this.width}`}>
-        {status != 'starting' && <Header />}
+        {status != 'starting'}
         <Info
           setSpeed={this.setSpeed.bind(this)}
           interval={interval}
