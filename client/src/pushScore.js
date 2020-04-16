@@ -22,6 +22,7 @@ const pushScore = (score, game) => {
   // get current values stored in localstorage
   let current1 = JSON.parse(localStorage.getItem('game1Data'))
   let current2 = JSON.parse(localStorage.getItem('game2Data'))
+  let current3 = JSON.parse(localStorage.getItem('game3Data'))
 
   // obj for localstorage
   let scoreData = {
@@ -36,27 +37,35 @@ const pushScore = (score, game) => {
     switch (game) {
       case 'game1':
         // check if there is data stored in localstorage
-        if(!current1){
+        if (!current1) {
           localStorage.setItem('game1Data', scoreData);
           break;
         }
         // check the current score against score in localstorage
-        if(score > current1.score){localStorage.setItem('game1Data', scoreData)}
+        if (score > current1.score) { localStorage.setItem('game1Data', scoreData) }
         break;
 
       //game2
       case 'game2':
-        if(!current2){
+        if (!current2) {
           localStorage.setItem('game2Data', scoreData);
           break;
         }
-        if(score > current2.score){localStorage.setItem('game2Data', scoreData)}
+        if (score > current2.score) { localStorage.setItem('game2Data', scoreData) }
+        break;
+
+      case 'game3':
+        if (!current3) {
+          localStorage.setItem('game3Data', scoreData);
+          break;
+        }
+        if (score > current3.score) { localStorage.setItem('game3Data', scoreData) }
         break;
     }
 
     // if online
-  } 
-  if(navigator.onLine){
+  }
+  if (navigator.onLine) {
     switch (game) {
       case 'game1':
         axios.get(`/api/users/${user._id}`,
@@ -92,6 +101,23 @@ const pushScore = (score, game) => {
             }
           })
         break;
+        case 'game3':
+          axios.get(`/api/users/${user._id}`,
+            {
+              headers: {
+                'token': token
+              }
+            }).then(user => {
+              if (score > user.data.game3) {
+                axios.patch(`/api/users/${user.data._id}`,
+                  { game3: score }, { headers: { 'token': token } },
+                  (err, res) => {
+                    if (err) return console.log(err);
+                  }
+                );
+              }
+            })
+          break;
     }
   }
 }
