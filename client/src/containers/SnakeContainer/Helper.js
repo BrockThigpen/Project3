@@ -40,11 +40,6 @@ export const newDots = (index, size, length, history, prevDots) =>
     dots => eraceFootprint(size, length, dots, history)
   ]);
 
-/*
- * @param str 任意の文字列
- * @param index 0から始まる配列のindex
- * @param array 配列
- */
 const replace = (str, index, array) => [
   ...array.slice(0, index - 1),
   str,
