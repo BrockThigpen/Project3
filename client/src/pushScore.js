@@ -1,47 +1,99 @@
+// TODO: =========================//
+// 
+// when network connect is reestablished 
+// check scores from localstorage against
+// score in the DB, update if needed
+// 
+// ============================== //
+
 import httpClient from './httpClient';
 import axios from 'axios'
 
+// used for retrieving logged in users info
+const user = httpClient.getCurrentUser();
+const token = httpClient.getToken();
+
+
+// checking connention status
+window.addEventListener('online', () => console.log('connected'))
+window.addEventListener('offline', () => console.log('not connected'))
+
 const pushScore = (score, game) => {
-  // axios.get(window.location.origin + '/api/users/')
-  const user = httpClient.getCurrentUser();
-  const token = httpClient.getToken();
-  switch (game) {
-    case 'game1':
+
+  // get current values stored in localstorage
+  let current1 = JSON.parse(localStorage.getItem('game1Data'))
+  let current2 = JSON.parse(localStorage.getItem('game2Data'))
+
+  // obj for localstorage
+  let scoreData = {
+    'game': game,
+    'score': score
+  }
+  scoreData = JSON.stringify(scoreData)
+
+  // if offline
+  if (!navigator.onLine) {
+    // game1
+    switch (game) {
+      case 'game1':
+        // check if there is data stored in localstorage
+        if(!current1){
+          localStorage.setItem('game1Data', scoreData);
+          break;
+        }
+        // check the current score against score in localstorage
+        if(score > current1.score){localStorage.setItem('game1Data', scoreData)}
+        break;
+
+      //game2
+      case 'game2':
+        if(!current2){
+          localStorage.setItem('game2Data', scoreData);
+          break;
+        }
+        if(score > current2.score){localStorage.setItem('game2Data', scoreData)}
+        break;
+    }
+
+    // if online
+  } 
+  if(navigator.onLine){
+    switch (game) {
+      case 'game1':
         axios.get(`/api/users/${user._id}`,
-        {
-          headers: {
-            'token': token
-          }
-        }).then(user => {
-          if (score > user.data.game1) {
-            // let strScore = parseInt(score);
-            axios.patch(`/api/users/${user.data._id}`,
-              { game1: score }, { headers: { 'token': token }},
-              (err, res) => {
-                if (err) return console.log(err);
-              }
-            );
-          }
-        })
-      break;
-    case 'game2':
-      axios.get(`/api/users/${user._id}`,
-        {
-          headers: {
-            'token': token
-          }
-        }).then(user => {
-          if (score > user.data.game2) {
-            // let strScore = parseInt(score);
-            axios.patch(`/api/users/${user.data._id}`,
-              { game2: score }, { headers: { 'token': token }},
-              (err, res) => {
-                if (err) return console.log(err);
-              }
-            );
-          }
-        })
-      break;
+          {
+            headers: {
+              'token': token
+            }
+          }).then(user => {
+            if (score > user.data.game1) {
+              axios.patch(`/api/users/${user.data._id}`,
+                { game1: score }, { headers: { 'token': token } },
+                (err, res) => {
+                  if (err) return console.log(err);
+                }
+              );
+            }
+          })
+        break;
+      case 'game2':
+        axios.get(`/api/users/${user._id}`,
+          {
+            headers: {
+              'token': token
+            }
+          }).then(user => {
+            if (score > user.data.game2) {
+              axios.patch(`/api/users/${user.data._id}`,
+                { game2: score }, { headers: { 'token': token } },
+                (err, res) => {
+                  if (err) return console.log(err);
+                }
+              );
+            }
+          })
+        break;
+    }
   }
 }
 
