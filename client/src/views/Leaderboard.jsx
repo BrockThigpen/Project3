@@ -15,7 +15,7 @@ const Leaderboard = () => {
       .catch((err) => setError(err));
   }, []);
   return (
-    <div class="text-center">
+    <div className="text-center">
       <Online>
         <Table playerData={playerData} />
       </Online>

@@ -54,7 +54,6 @@ class AppContainer extends React.Component {
         this.setState({
             score
         }, function () {
-            console.log(score);
             const game = 'game1'
             pushScore(score, game)
         });
