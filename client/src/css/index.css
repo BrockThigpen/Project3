@@ -26,7 +26,7 @@
 }
 
 .dots.food {
-  background: pink;
+  background:red;
 }
 
 .field-600 {
@@ -97,7 +97,7 @@
   text-align: center;
   display: block;
   border: 1px solid white;
-  background: #027fff;
+  background: red;
   color: white;
   font-weight: bold;
 }
@@ -110,7 +110,7 @@
 }
 
 .btn.btn-status {
-  background: #00d22d;
+  background: red;
   border-radius: 0;
   border: 0px;
   padding: 10px;
