@@ -20,17 +20,17 @@ class AppContainer extends React.Component {
 
         this.handleGameOver = this.handleGameOver.bind(this);
         this.handleScore = this.handleScore.bind(this);
-        $("body").mousedown((e) => this.handleGameStarted(e));
+        // $("body").mousedown((e) => this.handleGameStarted(e));
 
     }
 
-    handleGameStarted(e) {
-        if ($("body").mousedown(e)) {
-            this.setState({
-                isGameStarted: true
-            });
-        }
-    }
+    // handleGameStarted(e) {
+    //     if ($("body").mousedown(e)) {
+    //         this.setState({
+    //             isGameStarted: true
+    //         });
+    //     }
+    // }
 
 
     componentDidMount() {
