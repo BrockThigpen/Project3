@@ -13,7 +13,6 @@ import axios from 'axios'
 const user = httpClient.getCurrentUser();
 const token = httpClient.getToken();
 
-
 // checking connention status
 window.addEventListener('online', () => console.log('connected'))
 window.addEventListener('offline', () => console.log('not connected'))
