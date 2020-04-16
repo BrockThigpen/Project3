@@ -9,8 +9,8 @@ import SignUp from './views/SignUp'
 import Games from './views/Games'
 import Leaderboard from './views/Leaderboard'
 import Pong from './views/Pong'
-import FlappyBird from './views/FlappyBird'
 import Home from './views/Home'
+import DodgeBall from './views/DodgeBall';
 
 class App extends React.Component {
   state = { currentUser: httpClient.getCurrentUser() }
@@ -73,9 +73,9 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/FlappyBird"
+            path="/DodgeBall"
             render={() => {
-              return currentUser ? <FlappyBird /> : <Redirect to="/login" />
+              return currentUser ? <DodgeBall /> : <Redirect to="/login" />
             }}
           />
           <Route

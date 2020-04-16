@@ -8,7 +8,7 @@ const Games = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-4 d-flex justify-content-center">
-          <Link to="/FlappyBird">
+          <Link to="/DodgeBall">
             <img src={ball} alt="ball_game" className="gameApps" />
           </Link>
         </div>

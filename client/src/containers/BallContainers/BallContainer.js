@@ -1,6 +1,6 @@
 import React from "react";
 import $ from "jquery";
-import Bird from "../../components/BirdGame/Bird.js";
+import Bird from "../../components/DodgeBall/Ball.js";
 import "../../css/BirdGameCss/main.css";
 var oldPillar;
 
@@ -35,10 +35,6 @@ export default class BirdContainer extends React.Component {
 			$("body").keypress((e) => this.handleKeyPress(e));
 			// document.getElementById("body").onTap = this.handleTap(onTap);
 			$(".gameContainer.text-center").mousedown((e) => this.handleMouseDown(e));
-			
-			$("body").mousedown((e) => this.handleGameStarted(e));
-
-
 		}
 	
 		handleKeyPress(e) {
@@ -185,19 +181,3 @@ export default class BirdContainer extends React.Component {
 				
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

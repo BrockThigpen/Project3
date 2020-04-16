@@ -1,5 +1,5 @@
 import React from "react";
-import App from "../../components/BirdGame/App";
+import App from "../../components/DodgeBall/App";
 import $ from "jquery";
 import pushScore from "../../pushScore";
 
@@ -20,17 +20,18 @@ class AppContainer extends React.Component {
         
         this.handleGameOver = this.handleGameOver.bind(this);
         this.handleScore = this.handleScore.bind(this);
-        $("body").mousedown((e) => this.handleGameStarted(e));
+        // $("body").mousedown((e) => this.handleGameStarted(e));
 
     }
-
-    handleGameStarted(e){
-        if ($("body").mousedown(e)) {
-            this.setState({
-                isGameStarted: true
-            });
-        }
-    }
+    
+    // handleGameStarted(e){
+       
+    //     if ($("body").mousedown(e)) {
+    //         this.setState({
+    //            isGameStarted: true
+    //         });
+    //     }
+    // }
 
     
     componentDidMount() {
@@ -68,6 +69,7 @@ class AppContainer extends React.Component {
             
         return( 
                 <App
+                handleGameStarted={this.handleGameStarted}
                 isGameOver={isGameOver} 
                 isGameStarted={isGameStarted}
                 score={score}

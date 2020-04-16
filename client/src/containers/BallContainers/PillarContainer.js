@@ -2,7 +2,7 @@ import React from "react";
 import { v4 } from "uuid";
 import $ from "jquery";
 
-import Pillars from "../../components/BirdGame/Pillars";
+import Pillars from "../../components/DodgeBall/Pillars";
 
 export default class PillarContainer extends React.Component {
 	constructor(props) {

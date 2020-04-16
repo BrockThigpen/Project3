@@ -1,6 +1,6 @@
 import React from "react";
-import BirdContainer from "../../containers/BirdContainers/BirdContainer";
-import PillarContainer from "../../containers/BirdContainers/PillarContainer";
+import BirdContainer from "../../containers/BallContainers/BallContainer";
+import PillarContainer from "../../containers/BallContainers/PillarContainer";
 import Score from "./Score";
 import GameOver from "./GameOver";
 import StartScreen from "./StartScreen";
@@ -22,8 +22,9 @@ function App(props) {
     
   } else {
     return (
-      
+      <div>
       <StartScreen />
+      </div>
 
     )
   }
