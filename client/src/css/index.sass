@@ -1,0 +1,171 @@
+body
+  margin: 0px
+  padding: 0px
+  font-family: sans-serif
+
+*, *:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -o-box-sizing: border-box
+  -ms-box-sizing: border-box
+  box-sizing: border-box
+
+.root
+  display: flex
+  justify-content: center
+
+.app
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.header
+  width: 100%
+  text-align: center
+  border: 1px solid #d8d8d8
+  border-top: 0
+  border-bottom: 3px solid #d8d8d8
+
+.h1
+  color: #191919
+  margin: 10px
+  font-size: 30px
+
+.dots
+  background-color: #191919
+.snake
+  background-color: white
+.food
+  background: pink
+
+.field
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  align-content: space-around
+
+.row
+  display: flex
+@for $i from 1 through 600
+  .width-#{$i}
+    width: #{$i}px
+
+@for $i from 1 through 600
+  .dots-for-width-#{$i}
+    width: #{$i / 30}px
+    height: #{$i / 30}px
+
+
+.info
+  margin: 0px 10px
+  text-align: center
+  background: #080808
+  color: white
+  width: 100%
+
+.move
+  width: 100%
+  border-top: 0
+  display: flex
+  .col
+    width: 100%
+
+.form
+  display: flex
+  justify-content: space-evenly
+  font-size: 16px
+  margin: 10px 40px
+
+.form-group
+  display: flex
+  padding: 10px
+  align-items: center
+  justify-content: space-between
+
+.content
+  margin-left: 10px
+
+.input
+  text-align: right
+  font-size: 20px
+  padding: 5px 10px
+  border: 0
+  background: #313131
+  color: white
+
+.status
+  width: 100%
+
+.btn
+  padding: 10px
+  text-align: center
+  display: block
+  border: 1px solid #0074ea
+  background: #027fff
+  color: white
+  font-weight: bold
+  border-radius: 4px
+
+
+.btn-side
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.btn-left
+  border: 0
+  border-bottom: 5px solid #016cda
+  border-right: 2px solid #016cda
+
+.btn-up
+  border: 0
+  border-bottom: 5px solid #016cda
+
+.btn-down
+  border: 0
+  border-bottom: 5px solid #016cda
+
+.btn-right
+  border: 0
+  border-bottom: 5px solid #016cda
+  border-left: 2px solid #016cda
+
+.btn-status
+  border: 0
+  margin: 0px
+  font-size: 20px
+
+.start
+  background: #00d22d
+  border-bottom: 5px solid #008a1e
+  &:active
+    border-bottom: 0
+    opacity: 0.8
+
+
+.stop
+  background: orange
+  border-bottom: 5px solid #bb7a03
+  &:active
+    border-bottom: 0
+    opacity: 0.8
+
+.over
+  background: red
+  border-bottom: 5px solid #a90000
+  &:active
+    border-bottom: 0
+    opacity: 0.8
+
+.speed-pannel
+  display: flex
+  align-items: center
+
+.speed-pannel-icon
+  display: flex
+  flex-direction: column
+  font-size: 10px
+  margin: 5px
