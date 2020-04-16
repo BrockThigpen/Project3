@@ -10,6 +10,7 @@ const Games = lazy(() => import('./views/Games'));
 const Leaderboard = lazy(() => import('./views/Leaderboard'));
 const Pong = lazy(() => import('./views/Pong'));
 const FlappyBird = lazy(() => import('./views/FlappyBird'));
+const Snake = lazy(() => import('./views/Snake'));
 const Home = lazy(() => import('./views/Home'));
 
 class App extends React.Component {
@@ -91,6 +92,12 @@ class App extends React.Component {
                 path="/Pong"
                 render={() => {
                   return currentUser ? <Pong /> : <Redirect to="/login" />;
+                }}
+              />
+              <Route
+                path="/Snake"
+                render={() => {
+                  return currentUser ? <Snake /> : <Redirect to="/login" />;
                 }}
               />
               <Route path="/" component={Home} />
