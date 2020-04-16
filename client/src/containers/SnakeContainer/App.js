@@ -15,6 +15,7 @@ import {
 } from './Constant';
 import { MAP_KEY_DIRECTION, isBannedDirection, move } from './Directions';
 import { getIndex, isSelf, isFood, newDots, initDots } from './Helper';
+import pushScore from '../../pushScore';
 
 class App extends Component {
   constructor(props) {
@@ -109,6 +110,9 @@ class App extends Component {
       length: isFood(index, dots) ? length + 1 : length,
       direction: newDirection
     });
+    const game = 'game3'
+    let score = length
+    pushScore(score, game)
   };
 
   start = () => {
