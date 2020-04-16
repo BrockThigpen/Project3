@@ -10,7 +10,6 @@ export const move = (size, cursor, direction) => {
   let nextCursor = newCursor(cursor, direction);
   let nextDirection = direction;
   while (isConflicted(size, nextCursor)) {
-    // 壁にぶつかった場合
     nextDirection = REFLECT_DIRECTIONS[nextDirection];
     nextCursor = newCursor(cursor, nextDirection);
   }
