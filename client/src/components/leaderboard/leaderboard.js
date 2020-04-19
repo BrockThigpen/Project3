@@ -6,12 +6,15 @@ import { ReactTableDefaults } from 'react-table-v6'
  
 Object.assign(ReactTableDefaults, {
   defaultPageSize: 15,
+  showPagination: false,
+  // showPageJump: false,
 })
 
 function Table({ playerData }) {
   return (
 
     <ReactTable
+    
       data={playerData}
       columns={[
         {
@@ -30,6 +33,13 @@ function Table({ playerData }) {
         {
           Header: "Pong",
           accessor: 'game2',
+          style: {
+            textAlign: "center"
+          }
+        },
+        {
+          Header: "Snake",
+          accessor: 'game3',
           style: {
             textAlign: "center"
           }

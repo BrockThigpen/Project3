@@ -37,6 +37,10 @@
   flex-wrap: wrap;
   align-content: space-around;
 }
+.app{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .field-320 {
   padding: 0;
