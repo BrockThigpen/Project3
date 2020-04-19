@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import GameOver from './GameOver';
+import '../../css/gameover.css'
 
 class Status extends Component {
   get status() {
@@ -19,10 +21,17 @@ class Status extends Component {
 
   get isOver() {
     return this.status === 'over';
-  }
+    }
 
   render() {
     const { start, stop, width } = this.props;
+    if(this.isOver){
+      return(
+        <div className='gameover'>
+          <GameOver />
+        </div>
+      )
+    }else{
     return (
       <div className={`status width-${width}`}>
         {(this.isSuspended || this.isPreparing) && (
@@ -35,17 +44,9 @@ class Status extends Component {
             stop
           </div>
         )}
-        {this.isOver && (
-          <div
-            className="btn btn-status over"
-            onClick={() => window.location.reload()}
-          >
-            Game Over
-          </div>
-        )}
       </div>
     );
-  }
+  }}
 }
 
 export default Status;

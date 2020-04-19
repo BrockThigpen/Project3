@@ -6,7 +6,7 @@ export const START_LENGTH = 1;
 export const MAX_WIDTH = 400;
 
 export const MAX_SPEED = 500;
-export const DEFAULT_SPEED = 50;
+export const DEFAULT_SPEED = 80;
 export const MIN_SPEED = 1;
 
 export const SPEED_STEP_BY = 5;

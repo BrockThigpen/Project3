@@ -3,6 +3,7 @@ import Field from '../../components/Snake/Field';
 import Status from '../../components/Snake/Status';
 import Info from '../../components/Snake/Info';
 import Move from '../../components/Snake/Move';
+import GameOver from '../../components/Snake/GameOver';
 import {
   SIZE,
   START_X,
@@ -34,7 +35,9 @@ class App extends Component {
       status: 'preparing',
       interval: DEFAULT_SPEED
     };
+    
   }
+  
 
   get initCursor() {
     return { x: START_X, y: START_Y };
@@ -84,8 +87,8 @@ class App extends Component {
     if (status === 'starting') {
       return;
     }
-    let interval = Math.max(MIN_SPEED, input || 10);
-    interval = Math.min(MAX_SPEED, interval);
+    let interval = Math.min(MAX_SPEED, input || 10);
+    interval = Math.max(MIN_SPEED, interval);
     this.setState({ interval });
   }
 
@@ -109,6 +112,7 @@ class App extends Component {
       length: isFood(index, dots) ? length + 1 : length,
       direction: newDirection
     });
+    console.log(length);
   };
 
   start = () => {
@@ -138,7 +142,13 @@ class App extends Component {
       width,
       interval
     } = this.state;
+    if(this.isOver){
+      return(
+        <GameOver/>
+      )
+    }else{
     return (
+      <div>
       <div className={`app  width-${this.width}`}>
         {status != 'starting'}
         <Info
@@ -147,6 +157,8 @@ class App extends Component {
           length={length}
           status={status}
         />
+          {/* <GameOver  over={this.isOver}/> */}
+        
         <Field
           dots={dots}
           history={history}
@@ -154,13 +166,14 @@ class App extends Component {
           width={this.width}
           size={this.size}
           cursor={cursor}
-          over={this.over}
         />
         <Status status={status} start={this.start} stop={this.suspended} />
         <Move setDirection={this.setDirection.bind(this)} />
       </div>
+
+      </div>
     );
-  }
+  }}
 }
 
 export default App;

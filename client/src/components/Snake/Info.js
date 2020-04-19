@@ -19,7 +19,7 @@ class Info extends Component {
               />
             </div>
           </div>
-          <div className="form-group">
+          {/* <div className="form-group">
             <div className="label">Speed</div>
             <div className="content speed-pannel">
               <input
@@ -34,19 +34,19 @@ class Info extends Component {
               <div className="speed-pannel-icon">
                 <a
                   className="up-arrow"
-                  onClick={() => setSpeed(interval + SPEED_STEP_BY)}
+                  onClick={() => setSpeed(interval - SPEED_STEP_BY)}
                 >
                   ▲
                 </a>
                 <a
                   className="down-arrow"
-                  onClick={() => setSpeed(interval - SPEED_STEP_BY)}
+                  onClick={() => setSpeed(interval + SPEED_STEP_BY)}
                 >
                   ▽
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );
